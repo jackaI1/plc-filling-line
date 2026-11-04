@@ -1,6 +1,6 @@
 # PLC filling-line training bench
 
-A simulated bottle-filling line with a browser control panel and a maintenance log.
+I built a simulated bottle-filling line with a browser control panel and maintenance log because I wanted to practise fault recovery without physical equipment.
 
 ## Overview
 
