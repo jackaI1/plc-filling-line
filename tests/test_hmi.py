@@ -137,4 +137,7 @@ class HMITests(unittest.TestCase):
                 with socket.socket() as check:
                     self.assertNotEqual(check.connect_ex(("127.0.0.1", port)), 0, "Owned server port still open")
                 self.assertIsNotNone(proc.poll())
+                self.assertEqual(owned_processes(os.getpid()), [], "Owned child process remains after cleanup")
+                (artifacts / "cleanup.json").write_text(json.dumps({"server_pid": proc.pid, "port": port,
+                    "server_exited": True, "port_closed": True, "owned_descendants_remaining": []}, indent=2))
                 print(f"Cleaned owned HMI PID {proc.pid}; port {port} closed; browser and page closed")

@@ -57,6 +57,8 @@ class BenchTests(unittest.TestCase):
         self.bench.command({"action": "service"})
         self.bench.tick()
         self.assertEqual(len(self.bench.snapshot()["orders"]), 1)
+        with self.assertRaises(ValueError):
+            self.bench.command({"action": "service"})  # A closed order cannot be reused.
 
     def test_commands_reject_invalid_faults_and_running_reset(self):
         for payload in ({"action": "fault", "name": "bad", "value": True}, {"action": "fault", "name": "TankOK", "value": "false"}, [], {"action": "unknown"}):

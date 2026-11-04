@@ -1,4 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
+function setText(selector, value) {const node = $(selector); if (node.textContent !== value) node.textContent = value;}
 let connected = false, lastOrders = '', lastEvents = '';
 async function command(payload) {
   try {
@@ -37,7 +38,7 @@ function orders(rows) {
 }
 function render(state) {
   const out = state.outputs;
-  $('#status').textContent = out.Alarm ? 'Tripped — reset required' : out.BatchDone ? 'Batch complete' : out.Run ? 'Running' : 'Stopped';
+  setText('#status', out.Alarm ? 'Tripped — reset required' : out.BatchDone ? 'Batch complete' : out.Run ? 'Running' : 'Stopped');
   $('#status').className = out.Alarm ? 'alarm' : out.Run ? 'running' : '';
   $('#count').textContent = `${state.count} / 5`;
   $('#fill-time').textContent = `${(state.fill_ms / 1000).toFixed(2)} s`;
@@ -56,7 +57,7 @@ function render(state) {
   const io = $('#io'); io.replaceChildren();
   for (const [name, value] of Object.entries({...state.inputs, ...out})) {
     const item = text('span', name), lamp = document.createElement('i');
-    lamp.className = `lamp ${value ? 'on' : ''}`; lamp.setAttribute('aria-label', value ? 'true' : 'false'); item.prepend(lamp); io.append(item);
+    lamp.className = `lamp ${value ? 'on' : ''}`; lamp.setAttribute('role', 'img'); lamp.setAttribute('aria-label', value ? 'true' : 'false'); item.prepend(lamp); io.append(item);
   }
   document.querySelectorAll('[data-fault]').forEach(input => {
     const value = input.dataset.fault === 'jammed' ? state.plant.jammed : state.inputs[input.dataset.fault];
@@ -75,9 +76,9 @@ async function poll() {
     const response = await fetch('/api/state', {signal: AbortSignal.timeout(2500)});
     if (!response.ok) throw new Error('HMI connection unavailable');
     const state = await response.json(); connected = true;
-    $('#connection').textContent = 'Controller connected'; render(state);
+    setText('#connection', 'Controller connected'); render(state);
   } catch (_) {
-    connected = false; $('#connection').textContent = 'Disconnected — controls unavailable';
+    connected = false; setText('#connection', 'Disconnected — controls unavailable');
     document.querySelectorAll('button, input, select').forEach(node => node.disabled = true);
   } finally {
     if (connected) document.querySelectorAll('[data-fault], #order-form input, #order-form select, #order-form button, #orders input, #orders button').forEach(node => node.disabled = false);

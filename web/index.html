@@ -37,7 +37,7 @@
 <section class="maintenance" aria-labelledby="maintenance-title"><div class="section-heading"><h2 id="maintenance-title">Maintenance log</h2><span>Local SQLite records</span></div>
 <p>Trips create corrective work orders. An accelerated 30-second running interval creates a nozzle inspection task.</p>
 <form id="order-form"><label>Asset<select name="asset"><option>CV-01</option><option>FV-01</option><option>Line-01</option></select></label><label>Type<select name="kind"><option value="corrective">Corrective</option><option value="preventive">Preventive</option></select></label><label class="issue">Issue<input name="issue" required maxlength="300" placeholder="e.g. Inspect conveyor tracking"></label><button>Add work order</button></form>
-<div class="table-scroll"><table><thead><tr><th>Order / asset</th><th>Issue</th><th>Status / resolution</th></tr></thead><tbody id="orders"></tbody></table></div>
+<div class="table-scroll" role="region" aria-label="Maintenance work orders" tabindex="0"><table><thead><tr><th>Order / asset</th><th>Issue</th><th>Status / resolution</th></tr></thead><tbody id="orders"></tbody></table></div>
 <button id="service" data-command="service">Acknowledge preventive service</button><p class="hint">Stop the line and close a preventive order before acknowledging service.</p>
 </section>
 <section class="events"><h2>Event history</h2><ol id="events"></ol></section>
