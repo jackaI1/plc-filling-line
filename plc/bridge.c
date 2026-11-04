@@ -35,7 +35,8 @@ void plc_scan(FILLINGLINE *line, uint64_t millis, uint32_t inputs) {
 uint32_t plc_outputs(FILLINGLINE *line) {
 #define VALUE(field, bit) ((__GET_VAR(line->field) ? 1u : 0u) << bit)
     return VALUE(RUN, 0) | VALUE(CONVEYOR, 1) | VALUE(VALVE, 2) |
-           VALUE(ALARM, 3) | VALUE(BATCHDONE, 4) | VALUE(FILLED, 5);
+           VALUE(ALARM, 3) | VALUE(BATCHDONE, 4) | VALUE(FILLED, 5) |
+           VALUE(FILLBLOCKED, 6);
 }
 
 int plc_count(FILLINGLINE *line) { return __GET_VAR(line->BATCHCOUNT.CV); }

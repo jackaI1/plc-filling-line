@@ -24,6 +24,7 @@
   <div class="readouts"><div><span>Batch</span><strong id="count">0 / 5</strong></div><div><span>Fill timer</span><strong id="fill-time">0.00 s</strong></div><div><span>Running time</span><strong id="runtime">0.0 s</strong></div><div><span>Scan interval</span><strong>50 ms</strong></div></div>
   <div class="controls"><button id="start" class="primary" data-command="start">Start line</button><button id="stop" class="stop" data-command="stop">Stop line</button><button id="reset" data-command="reset">Reset batch / discard bottle</button></div>
   <p class="hint">A trip needs its cause cleared, then Reset and a fresh Start. Reset discards the current simulated bottle.</p>
+  <p id="fill-diagnostic" role="status">No fill-position timeout.</p>
   <p id="error" role="alert"></p>
 </section>
 <aside aria-labelledby="fault-title"><h2 id="fault-title">Fault injection</h2><p>Change a sensor or stall the conveyor to test the controller.</p>
@@ -32,6 +33,7 @@
   <label><input type="checkbox" data-fault="TankOK" data-invert> Tank low</label>
   <label><input type="checkbox" data-fault="JamSwitch"> Jam switch active</label>
   <label><input type="checkbox" data-fault="jammed"> Stall conveyor (timer trip)</label>
+  <label><input type="checkbox" data-fault="fill_sensor_stuck"> Hold fill sensor on</label>
   <h3>I/O monitor</h3><div id="io" class="io"></div><p class="hint">Green = true. Inputs and outputs come from the compiled PLC.</p>
 </aside>
 <section class="maintenance" aria-labelledby="maintenance-title"><div class="section-heading"><h2 id="maintenance-title">Maintenance log</h2><span>Local SQLite records</span></div>

@@ -75,6 +75,7 @@ The adapter samples these BOOL inputs at each 50 ms virtual scan. These are name
 | 3 | Alarm | Latched fault indication |
 | 4 | BatchDone | Five bottles counted |
 | 5 | Filled | Internal fill-complete latch exposed for inspection |
+| 6 | FillBlocked | Latched fill-position clearance timeout |
 
 `ExitEdge` observes the sensor even while stopped. Its pulse is gated by Run before the CTU input, so a sensor held high across a reset/restart cannot count the same bottle twice. CTU counts rising edges, not scans. Start also uses an R_TRIG block, so holding Start through a trip and reset cannot restart the line.
 
@@ -82,13 +83,27 @@ The adapter samples these BOOL inputs at each 50 ms virtual scan. These are name
 
 - `FillTimer` is a TON with a one-second preset; filling inhibits conveyor travel. `Filled` holds until the bottle leaves the fill sensor or Run drops.
 - `JamTimer` is a three-second TON driven by the **previous scan's** Conveyor command and absence of the exit sensor. Normal bottle motion/filling resets it. This models a travel timeout, not motor-current monitoring.
-- Faults latch for unhealthy permissives, JamSwitch, a travel timeout or an interrupted fill. They clear only when the cause is healthy, the fill position is empty and Reset is requested.
+- `FillClearTimer` is a one-second TON enabled by Run, Filled and BottleAtFill from the input image and retained state. It begins on the scan after filling completes. Normal clearance takes less than half a second in this plant. Dropping the sensor or Run resets elapsed time; a new bottle receives a new interval. No Python or browser timer makes this control decision.
+- `FillBlocked` latches when that timer expires. It can clear only with Reset and an empty fill sensor. It feeds Fault before Run and the output coils, so the trip removes Run, Conveyor and Valve in the same scan. Clearing the sensor alone retains the diagnostic. It distinguishes a fill-clearance timeout from general travel timeout, not a mechanical jam from a faulty sensor.
+- Faults latch for unhealthy permissives, JamSwitch, a travel timeout, a fill-clearance timeout or an interrupted fill. They clear only when the cause is healthy, the fill position is empty and Reset is requested.
 - Resetting a stopped simulation discards its current bottle as a manual operator action. It is not a physical reject actuator in the ladder. Reset does not start the line.
-- The actual OpenPLC exporter emits function-block calls before the coils. Read `plc/line.st` for executable scan order: edge detectors, counter, timers, Fault, Run, Filled, Conveyor, Valve, Alarm and BatchDone. The fill timer reads the prior Run state; output coils use the current interlocks. Tests check timer boundaries and same-scan output de-energization.
+- The pinned OpenPLC exporter emits ordered function-block calls before coils. In this version its coil comparator preserves document order for differing coordinates; coil executionOrderId does not determine the emitted order. `FillBlocked` precedes Fault in both the XML document and the drawing to ensure current-scan shutdown and single-reset recovery. Read `plc/line.st` for executable scan order: edge detectors, counter, timers, FillBlocked, Fault, Run, Filled, Conveyor, Valve, Alarm and BatchDone. The fill timer reads the prior Run state; output coils use the current interlocks. Tests check timer boundaries and same-scan output de-energization.
 - Native IEC function blocks retain their instance state between scans. The C bridge supplies `__CURRENT_TIME`; Python advances it in fixed 50 ms steps. The HTTP server and scans run on one thread, so no concurrent native scans share that clock.
 - Native PLC state and simulated bottle position start fresh after a process restart. Only maintenance orders/events persist. No automatic production restart or retained batch counter is implied.
 
 ## Assets and records
+
+The **Hold fill sensor on** checkbox sets the simulated input image, not a PLC
+fault flag. Actual bottle motion and liquid level still follow the native
+Conveyor and Valve outputs. A real bottle stalled under the fill sensor and a
+held-on sensor both produce the same FillBlocked diagnostic. A rising alarm
+creates an FV-01 corrective order with that diagnostic when FillBlocked is
+present. The system does not assert which physical cause occurred. A sensor
+stuck off, dose measurement and wiring faults are outside this check's scope.
+
+`python -m fillingline.practice --fault fill-sensor` exercises the same PLC
+through refusal of an unhealthy reset, cause clearing, work-order completion,
+reset, fresh start and a five-bottle batch. It runs without a server or sleeps.
 
 `CV-01` is the conveyor, `FV-01` the fill valve/nozzle, and `Line-01` the overall line. Each work order has an asset, corrective/preventive type, issue, open/closed status, opening/closing timestamps and resolution. SQL parameters and DOM text nodes keep notes as data. A rising alarm creates one corrective order per trip, not one per scan. Acknowledging preventive service requires a stopped line and a completed preventive order.
 
@@ -103,6 +118,7 @@ The 30-second preventive interval is deliberately accelerated for demonstration.
 | Emergency stop, guard, tank and jam | Native interlock tests, randomized scans, browser emergency-stop trip and plant travel timeout |
 | Recovery and held Start | Native reset/edge tests; browser clear → reset → fresh start |
 | Partial-fill recovery | Native fault test and plant discard test |
+| Fill-position clearance | Native 950/1000 ms boundary, same-scan shutdown, timer rearming, unhealthy reset; plant bottle jam and held sensor; browser checkbox and diagnostic; terminal recovery |
 | Add/close work order | Browser form, mandatory resolution, literal markup rendering and SQLite reopen test |
 | Preventive service | Accelerated interval and stopped-line service gate tests |
 | Desktop/mobile readability | Real-browser screenshots at 1440 and 390 px; no document overflow |

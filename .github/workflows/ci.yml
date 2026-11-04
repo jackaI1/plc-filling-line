@@ -21,7 +21,7 @@ jobs:
       - name: Compile ladder through pinned OpenPLC matiec
         run: python tools/build.py > /tmp/plc-build.log 2>&1 || { tail -80 /tmp/plc-build.log; exit 1; }
       - run: python tools/validate_schema.py
-      - name: Native scan, simulated plant, CMMS and browser acceptance tests
+      - name: Native scan, fill-clearance recovery, maintenance and browser tests
         run: python -m unittest discover -s tests -v
       - uses: actions/upload-artifact@v4
         if: always()

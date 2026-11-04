@@ -17,6 +17,7 @@ PROGRAM FillingLine
     Valve : BOOL;
     Alarm : BOOL;
     BatchDone : BOOL;
+    FillBlocked : BOOL;
   END_VAR
   VAR
     Fault : BOOL;
@@ -26,14 +27,17 @@ PROGRAM FillingLine
     BatchCount : CTU;
     JamTimer : TON;
     FillTimer : TON;
+    FillClearTimer : TON;
   END_VAR
 
   StartEdge(CLK := Start);
   ExitEdge(CLK := ExitSensor);
   BatchCount(CU := Run AND ExitEdge.Q, R := Reset, PV := 5);
   JamTimer(IN := NOT(ExitSensor) AND Conveyor, PT := T#3000ms);
+  FillClearTimer(IN := BottleAtFill AND Filled AND Run, PT := T#1000ms);
   FillTimer(IN := NOT(Filled) AND BottleAtFill AND Run, PT := T#1000ms);
-  Fault := JamSwitch OR JamTimer.Q OR NOT(EStopOK) OR NOT(GuardClosed) OR NOT(TankOK) OR (BottleAtFill OR NOT(Reset)) AND Fault OR NOT(Filled) AND BottleAtFill AND Run AND Stop;
+  FillBlocked := FillClearTimer.Q OR (BottleAtFill OR NOT(Reset)) AND FillBlocked;
+  Fault := FillBlocked OR JamSwitch OR JamTimer.Q OR NOT(EStopOK) OR NOT(GuardClosed) OR NOT(TankOK) OR (BottleAtFill OR NOT(Reset)) AND Fault OR NOT(Filled) AND BottleAtFill AND Run AND Stop;
   Run := NOT(BatchCount.Q) AND NOT(Fault) AND TankOK AND GuardClosed AND EStopOK AND NOT(Stop) AND (Run OR StartEdge.Q);
   Filled := Run AND BottleAtFill AND (FillTimer.Q OR Filled);
   Conveyor := (Filled OR NOT(BottleAtFill)) AND Run;

@@ -1,9 +1,17 @@
 """A repeatable, server-free fault-recovery exercise using the compiled PLC."""
+import argparse
+
 from .plant import Bench
 
 
-def run_practice():
+def run_practice(fault="conveyor"):
     """Return observed checkpoints; fail rather than print a successful bad run."""
+    if fault not in {"conveyor", "fill-sensor"}:
+        raise ValueError("Choose conveyor or fill-sensor")
+    sensor = fault == "fill-sensor"
+    fault_input = "fill_sensor_stuck" if sensor else "jammed"
+    issue = ("fill-position clearance timeout (bottle jam or sensor held on)"
+             if sensor else "conveyor travel timeout")
     bench = Bench()  # Isolated in-memory ledger, never the HMI's saved database.
     checkpoints = []
 
@@ -27,23 +35,33 @@ def run_practice():
         return not any(state["outputs"][name] for name in ("Run", "Conveyor", "Valve"))
 
     try:
-        bench.command({"action": "fault", "name": "jammed", "value": True})
+        bench.command({"action": "fault", "name": fault_input, "value": True})
         bench.command({"action": "start"})
         state = wait_for("Alarm", 100)
         require(stopped(state), "Trip left equipment running")
         require(len(state["orders"]) == 1 and
-                state["orders"][0]["issue"] == "conveyor travel timeout",
-                "Travel timeout did not create one corrective work order")
+                state["orders"][0]["issue"] == issue,
+                "PLC timeout did not create one matching corrective work order")
         order_id = state["orders"][0]["id"]
-        record("tripped", "Stalled conveyor tripped; corrective order opened.", state)
+        record("tripped", "Fill position timed out; corrective order opened." if sensor
+               else "Stalled conveyor tripped; corrective order opened.", state)
 
-        bench.command({"action": "fault", "name": "jammed", "value": False})
+        if sensor:
+            bench.command({"action": "reset"})
+            state = bench.tick()
+            require(stopped(state) and state["outputs"]["FillBlocked"] and state["outputs"]["Alarm"],
+                    "Reset bypassed a fill sensor still held on")
+            record("reset_refused", "Reset cannot clear a fill sensor still held on.", state)
+
+        bench.command({"action": "fault", "name": fault_input, "value": False})
         state = bench.tick()
         require(stopped(state) and state["outputs"]["Alarm"], "Clearing stall restarted the line")
-        record("cause_cleared", "Stall cleared; alarm still latched and equipment stopped.", state)
+        record("cause_cleared", "Sensor released; alarm still latched and equipment stopped." if sensor
+               else "Stall cleared; alarm still latched and equipment stopped.", state)
 
         bench.command({"action": "close_order", "id": order_id,
-                       "resolution": "Removed simulated conveyor obstruction; ready for reset and fresh start."})
+                       "resolution": "Released simulated fill sensor; ready for reset and fresh start." if sensor
+                       else "Removed simulated conveyor obstruction; ready for reset and fresh start."})
         state = bench.tick()
         require(stopped(state) and state["outputs"]["Alarm"], "Closing order changed PLC recovery state")
         require(state["orders"][0]["status"] == "closed", "Work order did not close")
@@ -71,8 +89,11 @@ def run_practice():
 
 
 def main():
-    print("Simulated conveyor-stall practice (virtual time; temporary maintenance log)")
-    for state in run_practice():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--fault", choices=("conveyor", "fill-sensor"), default="conveyor")
+    args = parser.parse_args()
+    print(f"Simulated {args.fault} practice (virtual time; temporary maintenance log)")
+    for state in run_practice(args.fault):
         out = state["outputs"]
         print(f"{state['time_ms'] / 1000:5.2f}s  {state['message']}")
         print(f"        motor={'on' if out['Conveyor'] else 'off'}, "

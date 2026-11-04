@@ -40,6 +40,9 @@ function render(state) {
   const out = state.outputs;
   setText('#status', out.Alarm ? 'Tripped — reset required' : out.BatchDone ? 'Batch complete' : out.Run ? 'Running' : 'Stopped');
   $('#status').className = out.Alarm ? 'alarm' : out.Run ? 'running' : '';
+  setText('#fill-diagnostic', out.FillBlocked
+    ? 'Fill position did not clear. Check for a jam or a sensor held on, then reset.'
+    : 'No fill-position timeout.');
   $('#count').textContent = `${state.count} / 5`;
   $('#fill-time').textContent = `${(state.fill_ms / 1000).toFixed(2)} s`;
   $('#runtime').textContent = `${(state.plant.runtime_ms / 1000).toFixed(1)} s`;
@@ -60,7 +63,8 @@ function render(state) {
     lamp.className = `lamp ${value ? 'on' : ''}`; lamp.setAttribute('role', 'img'); lamp.setAttribute('aria-label', value ? 'true' : 'false'); item.prepend(lamp); io.append(item);
   }
   document.querySelectorAll('[data-fault]').forEach(input => {
-    const value = input.dataset.fault === 'jammed' ? state.plant.jammed : state.inputs[input.dataset.fault];
+    const value = ['jammed', 'fill_sensor_stuck'].includes(input.dataset.fault)
+      ? state.plant[input.dataset.fault] : state.inputs[input.dataset.fault];
     if (document.activeElement !== input) input.checked = input.hasAttribute('data-invert') ? !value : value;
   });
   const key = JSON.stringify(state.orders); if (key !== lastOrders) {orders(state.orders); lastOrders = key;}

@@ -5,7 +5,7 @@ import platform
 ROOT = Path(__file__).resolve().parents[1]
 INPUTS = ("Start", "Stop", "Reset", "EStopOK", "GuardClosed", "TankOK",
           "BottleAtFill", "ExitSensor", "JamSwitch")
-OUTPUTS = ("Run", "Conveyor", "Valve", "Alarm", "BatchDone", "Filled")
+OUTPUTS = ("Run", "Conveyor", "Valve", "Alarm", "BatchDone", "Filled", "FillBlocked")
 SCAN_MS = 50
 
 
