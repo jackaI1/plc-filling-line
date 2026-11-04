@@ -1,19 +1,17 @@
 # PLC filling-line training bench
 
-I built a simulated bottle-filling line with a browser control panel and maintenance log because I wanted to practise fault recovery without physical equipment.
+I built a bottle-filling simulator because I wanted to practise stopping a faulty line and getting it running again without needing physical equipment.
 
 ## Overview
 
-When a conveyor stops, clearing the fault and getting it running again are separate
-steps. I wanted a small bench where I could practise that sequence, see why the
-motor or valve stayed off, and keep a record of what I checked without needing
-physical equipment.
+Clearing an obstruction does not mean a conveyor should start moving again.
+I wanted to see that distinction play out: what stops the motor and valve, what
+keeps them off, and what I must do before starting a fresh batch.
 
-This personal project runs a five-bottle batch on a simulated conveyor. I use the
-browser control panel to watch each bottle fill, stall the conveyor or open a
-guard, then work through clearing the cause, resetting and starting again. The
-maintenance log records corrective work after a fault and opens a nozzle
-inspection order at an accelerated practice interval.
+In this personal project, I run five virtual bottles along a conveyor using a
+browser control panel. I can watch them fill, stall the conveyor or open a guard.
+Then I clear the cause, reset and start again. A maintenance log records the
+repair work and opens a nozzle inspection order after a short practice interval.
 
 Follow the setup below, open **http://127.0.0.1:8765**, and press **Start line**.
 The panel shows the conveyor, valve, sensors and bottle count. For a quick
@@ -95,16 +93,25 @@ neither action restarts the line, then resets and starts a full five-bottle batc
 It runs the same compiled controller and plant as the browser, with an isolated
 in-memory log. It opens no server and leaves the browser's saved work orders alone.
 
-## Controller and tests
+## How the controller works
 
-The control program lives in [plc/line.xml](plc/line.xml), a ladder diagram made
-of contacts, coils, timers and a bottle counter. OpenPLC exports it to code that
-is compiled and run by Python. The browser displays its decisions and sends
-operator requests; it does not decide when the motor or valve runs.
+A programmable logic controller (PLC) repeatedly reads sensors and decides
+which outputs should run. Here I run that control program on the computer.
+Its source is [plc/line.xml](plc/line.xml), a ladder diagram: a drawing of
+conditions and on/off decisions, with timers and a bottle counter.
+
+OpenPLC, the controller development tools, exports the diagram to Structured
+Text, a text form of controller instructions. The matiec compiler converts it
+to code the computer can execute. Python supplies simulated sensor inputs every
+50 milliseconds and moves the virtual bottles according to the outputs. The
+browser panel, also called a human-machine interface (HMI), shows those
+decisions and sends button presses.
 
 See [the ladder diagram](docs/ladder.svg) and
 [control and build notes](docs/control-notes.md) for the input/output map,
 scan order, toolchain and instructions for changing the ladder.
+
+## Run the checks
 
 After setup, run:
 
@@ -113,7 +120,8 @@ python -m playwright install chromium
 python -m unittest discover -s tests -v
 ```
 
-CI rebuilds the controller and checks that its exported code matches the ladder.
+Continuous integration (CI), the automated checks GitHub runs for changes,
+rebuilds the controller and checks that its exported code matches the ladder.
 Tests exercise timed filling, counting, fault recovery, 2,000 randomized input
 steps, saved maintenance records, the terminal walkthrough and the browser panel.
 The browser test also checks the panel at desktop and phone widths. It closes its
@@ -124,7 +132,9 @@ test page, browser and server and verifies that the server port is closed.
 This is a personal practice simulation with idealized sensors and virtual time.
 It has no physical PLC, connected equipment or hardware safety circuit. It does
 not establish dosing accuracy, real-time response or safe control of a machine.
-The maintenance log is a small local work-order record, not a commercial CMMS.
+The maintenance log keeps local work orders. It does not provide the wider
+scheduling and asset management of a commercial computerized maintenance
+management system (CMMS).
 
 Project code is MIT licensed. The OpenPLC editor and matiec compiler keep their
 upstream licenses. See [upstream references](docs/control-notes.md#upstream-references).
