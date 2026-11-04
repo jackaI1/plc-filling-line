@@ -1,6 +1,7 @@
 /* Host adapter only: all control decisions are generated from line.xml. */
 #include <stdint.h>
 #include <stdlib.h>
+#include <time.h>
 #include "iec_std_lib.h"
 TIME __CURRENT_TIME;
 BOOL __DEBUG = 0;
