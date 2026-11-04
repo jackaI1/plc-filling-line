@@ -10,6 +10,7 @@ class Bench:
         self.position = 0.0
         self.level = 0.0
         self.jammed = False
+        self.fill_sensor_stuck = False
         self.elapsed_ms = 0
         self.last_service_ms = 0
         self.pm_open = False
@@ -33,10 +34,12 @@ class Bench:
             self.commands[{"start": "Start", "stop": "Stop", "reset": "Reset"}[action]] = True
         elif action == "fault":
             name, value = payload.get("name"), payload.get("value")
-            if name not in {*self.faults, "jammed"} or type(value) is not bool:
+            if name not in {*self.faults, "jammed", "fill_sensor_stuck"} or type(value) is not bool:
                 raise ValueError("Choose a known Boolean fault input")
             if name == "jammed":
                 self.jammed = value
+            elif name == "fill_sensor_stuck":
+                self.fill_sensor_stuck = value
             else:
                 self.faults[name] = value
         elif action == "open_order":
@@ -59,7 +62,7 @@ class Bench:
             raise ValueError("Unknown command")
 
     def tick(self):
-        sensors = {"BottleAtFill": 0.40 <= self.position < 0.62,
+        sensors = {"BottleAtFill": self.fill_sensor_stuck or 0.40 <= self.position < 0.62,
                    "ExitSensor": 0.90 <= self.position < 1.0}
         state = self.plc.scan(**self.faults, **sensors,
                               **{n: self.commands.get(n, False) for n in ("Start", "Stop", "Reset")})
@@ -79,7 +82,11 @@ class Bench:
             if self.faults["JamSwitch"]:
                 causes.append("JamSwitch")
             cause = ", ".join(causes) or "conveyor travel timeout"
-            self.maintenance.open("CV-01" if not causes else "Line-01", "corrective", cause)
+            if out["FillBlocked"]:
+                causes.append("fill-position clearance timeout (bottle jam or sensor held on)")
+                cause = ", ".join(causes)
+            self.maintenance.open("FV-01" if out["FillBlocked"] else "CV-01" if not causes else "Line-01",
+                                  "corrective", cause)
             self.maintenance.event(f"PLC trip: {cause}")
         if out["BatchDone"] and not self.previous_done:
             self.maintenance.event("Batch complete: five exit-sensor rising edges")
@@ -92,7 +99,8 @@ class Bench:
 
     def snapshot(self):
         return {**self.plc.snapshot(), "plant": {"position": self.position, "level": self.level,
-                "jammed": self.jammed, "runtime_ms": self.elapsed_ms}, **self.maintenance.snapshot()}
+                "jammed": self.jammed, "fill_sensor_stuck": self.fill_sensor_stuck,
+                "runtime_ms": self.elapsed_ms}, **self.maintenance.snapshot()}
 
     def close(self):
         self.plc.close()

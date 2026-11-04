@@ -46,6 +46,45 @@ class BenchTests(unittest.TestCase):
         self.assertEqual(state["plant"]["level"], 0)
         self.assertFalse(state["outputs"]["Alarm"])
 
+    def test_held_sensor_reports_one_specific_order_and_cannot_reset_until_released(self):
+        self.bench.command({"action": "fault", "name": "fill_sensor_stuck", "value": True})
+        self.bench.command({"action": "start"})
+        for _ in range(60):
+            state = self.bench.tick()
+        self.assertTrue(state["outputs"]["FillBlocked"])
+        self.assertFalse(state["outputs"]["Conveyor"] or state["outputs"]["Valve"])
+        self.assertEqual(len(state["orders"]), 1)
+        self.assertEqual(state["orders"][0]["asset"], "FV-01")
+        self.assertEqual(state["orders"][0]["issue"],
+                         "fill-position clearance timeout (bottle jam or sensor held on)")
+        self.bench.command({"action": "reset"})
+        self.assertTrue(self.bench.tick()["outputs"]["Alarm"])
+        self.bench.command({"action": "fault", "name": "fill_sensor_stuck", "value": False})
+        self.assertTrue(self.bench.tick()["outputs"]["FillBlocked"])
+        self.bench.command({"action": "reset"})
+        self.assertFalse(self.bench.tick()["outputs"]["Alarm"])
+        self.assertFalse(self.bench.tick()["outputs"]["Run"])
+        self.bench.command({"action": "start"})
+        for _ in range(320):
+            state = self.bench.tick()
+        self.assertTrue(state["outputs"]["BatchDone"])
+        self.assertEqual(len(state["orders"]), 1)
+
+    def test_bottle_jam_at_fill_uses_clearance_diagnostic(self):
+        self.bench.command({"action": "start"})
+        for _ in range(60):
+            state = self.bench.tick()
+            if state["outputs"]["Filled"]:
+                break
+        else:
+            self.fail("Bottle never finished filling")
+        self.bench.command({"action": "fault", "name": "jammed", "value": True})
+        for _ in range(25):
+            state = self.bench.tick()
+        self.assertTrue(state["inputs"]["BottleAtFill"])
+        self.assertTrue(state["outputs"]["FillBlocked"])
+        self.assertIn("fill-position clearance", state["orders"][0]["issue"])
+
     def test_accelerated_preventive_interval_and_service_gate(self):
         self.bench.elapsed_ms = 30000
         self.bench.tick()

@@ -1,18 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 3140" role="img" aria-label="Filling line ladder diagram">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 3860" role="img" aria-label="Filling line ladder diagram">
 <style>text{font:15px sans-serif;fill:#243b53}path,polyline,line,rect{stroke:#47647b;stroke-width:2;fill:none}</style>
-<rect width="1520" height="3140" fill="white" style="fill:white;stroke:none"/>
+<rect width="1520" height="3860" fill="white" style="fill:white;stroke:none"/>
 <path d="M20 40v60"/>
 <path d="M20 260v60"/>
 <path d="M20 480v200"/>
 <path d="M20 790v130"/>
-<path d="M20 1030v480"/>
-<path d="M20 1620v130"/>
-<path d="M20 1860v130"/>
-<path d="M20 2100v130"/>
+<path d="M20 1750v550"/>
 <path d="M20 2340v130"/>
-<path d="M20 2580v60"/>
-<path d="M20 2800v60"/>
-<path d="M20 3020v60"/>
+<path d="M20 2580v130"/>
+<path d="M20 2820v130"/>
+<path d="M20 3060v130"/>
+<path d="M20 3300v60"/>
+<path d="M20 3520v60"/>
+<path d="M20 3740v60"/>
 <polyline points="20,60 45,60 45,60 70,60"/>
 <path d="M70 65h10m0 -12v24m16 -24v24m0 -12h10"/>
 <text x="68" y="43">Start</text>
@@ -59,135 +59,125 @@
 <text x="410" y="792">JamTimer : TON</text>
 <text x="417" y="829">IN</text>
 <text x="417" y="859">PT</text>
-<polyline points="20,1050 45,1050 45,1050 70,1050"/>
-<path d="M70 1055h10m0 -12v24m16 -24v24m0 -12h10"/>
-<path d="M78 1066l20 -22"/>
-<text x="68" y="1033">EStopOK</text>
-<polyline points="20,1120 45,1120 45,1120 70,1120"/>
-<path d="M70 1125h10m0 -12v24m16 -24v24m0 -12h10"/>
-<path d="M78 1136l20 -22"/>
-<text x="68" y="1103">GuardClosed</text>
-<polyline points="20,1190 45,1190 45,1190 70,1190"/>
-<path d="M70 1195h10m0 -12v24m16 -24v24m0 -12h10"/>
-<path d="M78 1206l20 -22"/>
-<text x="68" y="1173">TankOK</text>
-<polyline points="20,1260 45,1260 45,1260 70,1260"/>
-<path d="M70 1265h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="68" y="1243">JamSwitch</text>
-<polyline points="20,1330 45,1330 45,1330 70,1330"/>
-<path d="M70 1335h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="68" y="1313">JamTimer.Q</text>
-<polyline points="20,1400 45,1400 45,1400 70,1400"/>
-<path d="M70 1405h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="68" y="1383">Stop</text>
-<polyline points="106,1405 215,1405 215,1050 240,1050"/>
-<path d="M240 1055h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="238" y="1033">Run</text>
-<polyline points="276,1055 385,1055 385,1050 410,1050"/>
-<path d="M410 1055h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="408" y="1033">BottleAtFill</text>
-<polyline points="446,1055 555,1055 555,1050 580,1050"/>
-<path d="M580 1055h10m0 -12v24m16 -24v24m0 -12h10"/>
-<path d="M588 1066l20 -22"/>
-<text x="578" y="1033">Filled</text>
-<polyline points="20,1470 45,1470 45,1470 70,1470"/>
-<path d="M70 1475h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="68" y="1453">Fault</text>
-<polyline points="106,1475 215,1475 215,1120 240,1120"/>
-<path d="M240 1125h10m0 -12v24m16 -24v24m0 -12h10"/>
-<path d="M248 1136l20 -22"/>
-<text x="238" y="1103">Reset</text>
-<polyline points="106,1475 215,1475 215,1190 240,1190"/>
-<path d="M240 1195h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="238" y="1173">BottleAtFill</text>
-<polyline points="106,1055 725,1055 725,1050 750,1050"/>
-<polyline points="106,1125 725,1125 725,1050 750,1050"/>
-<polyline points="106,1195 725,1195 725,1050 750,1050"/>
-<polyline points="106,1265 725,1265 725,1050 750,1050"/>
-<polyline points="106,1335 725,1335 725,1050 750,1050"/>
-<polyline points="616,1055 725,1055 725,1050 750,1050"/>
-<polyline points="276,1125 725,1125 725,1050 750,1050"/>
-<polyline points="276,1195 725,1195 725,1050 750,1050"/>
-<path d="M750 1055h8m7 -12q-12 12 0 24m7 -24q12 12 0 24m7 -12h7"/>
-<text x="750" y="1033">Fault</text>
-<polyline points="20,1640 45,1640 45,1640 70,1640"/>
-<path d="M70 1645h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="68" y="1623">StartEdge.Q</text>
-<polyline points="20,1710 45,1710 45,1710 70,1710"/>
-<path d="M70 1715h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="68" y="1693">Run</text>
-<polyline points="106,1645 215,1645 215,1640 240,1640"/>
-<polyline points="106,1715 215,1715 215,1640 240,1640"/>
-<path d="M240 1645h10m0 -12v24m16 -24v24m0 -12h10"/>
-<path d="M248 1656l20 -22"/>
-<text x="238" y="1623">Stop</text>
-<polyline points="276,1645 385,1645 385,1640 410,1640"/>
-<path d="M410 1645h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="408" y="1623">EStopOK</text>
-<polyline points="446,1645 555,1645 555,1640 580,1640"/>
-<path d="M580 1645h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="578" y="1623">GuardClosed</text>
-<polyline points="616,1645 725,1645 725,1640 750,1640"/>
-<path d="M750 1645h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="748" y="1623">TankOK</text>
-<polyline points="786,1645 895,1645 895,1640 920,1640"/>
-<path d="M920 1645h10m0 -12v24m16 -24v24m0 -12h10"/>
-<path d="M928 1656l20 -22"/>
-<text x="918" y="1623">Fault</text>
-<polyline points="956,1645 1065,1645 1065,1640 1090,1640"/>
-<path d="M1090 1645h10m0 -12v24m16 -24v24m0 -12h10"/>
-<path d="M1098 1656l20 -22"/>
-<text x="1088" y="1623">BatchCount.Q</text>
-<polyline points="1126,1645 1235,1645 1235,1640 1260,1640"/>
-<path d="M1260 1645h8m7 -12q-12 12 0 24m7 -24q12 12 0 24m7 -12h7"/>
-<text x="1260" y="1623">Run</text>
-<polyline points="20,1880 45,1880 45,1880 70,1880"/>
-<path d="M70 1885h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="68" y="1863">Run</text>
-<polyline points="106,1885 215,1885 215,1880 240,1880"/>
-<path d="M240 1885h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="238" y="1863">BottleAtFill</text>
-<polyline points="276,1885 385,1885 385,1880 410,1880"/>
-<path d="M410 1885h10m0 -12v24m16 -24v24m0 -12h10"/>
-<path d="M418 1896l20 -22"/>
-<text x="408" y="1863">Filled</text>
-<text x="70" y="1952">T#1000ms</text>
-<polyline points="446,1885 555,1885 555,1895 580,1895"/>
-<polyline points="160,1955 555,1955 555,1925 580,1925"/>
-<rect x="580" y="1870" width="140" height="100"/>
-<text x="580" y="1862">FillTimer : TON</text>
-<text x="587" y="1899">IN</text>
-<text x="587" y="1929">PT</text>
+<path d="M20 1030v160"/>
+<polyline points="20,1045 50,1045 50,1045 70,1045"/>
+<path d="M70 1045h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="68" y="1023">Run</text>
+<polyline points="106,1045 220,1045 220,1045 240,1045"/>
+<path d="M240 1045h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="238" y="1023">Filled</text>
+<polyline points="276,1045 390,1045 390,1045 410,1045"/>
+<path d="M410 1045h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="408" y="1023">BottleAtFill</text>
+<text x="70" y="1132">T#1000ms</text>
+<polyline points="446,1045 630,1045 630,1055 650,1055"/>
+<polyline points="160,1135 630,1135 630,1085 650,1085"/>
+<rect x="650" y="1030" width="140" height="100"/>
+<text x="650" y="1022">FillClearTimer : TON</text>
+<text x="657" y="1059">IN</text>
+<text x="657" y="1089">PT</text>
+<path d="M20 1290v230"/>
+<polyline points="20,1305 50,1305 50,1305 70,1305"/>
+<path d="M70 1305h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="68" y="1283">FillClearTimer.Q</text>
+<polyline points="20,1305 50,1305 50,1375 70,1375"/>
+<path d="M70 1375h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="68" y="1353">FillBlocked</text>
+<polyline points="106,1375 260,1375 260,1375 280,1375"/>
+<path d="M280 1375h10m0 -12v24m16 -24v24m0 -12h10"/>
+<path d="M288 1386l20 -22"/>
+<text x="278" y="1353">Reset</text>
+<polyline points="106,1375 260,1375 260,1445 280,1445"/>
+<path d="M280 1445h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="278" y="1423">BottleAtFill</text>
+<polyline points="106,1305 630,1305 630,1305 650,1305"/>
+<polyline points="316,1375 630,1375 630,1305 650,1305"/>
+<polyline points="316,1445 630,1445 630,1305 650,1305"/>
+<path d="M650 1305h8m7 -12q-12 12 0 24m7 -24q12 12 0 24m7 -12h7"/>
+<text x="650" y="1283">FillBlocked</text>
+<polyline points="20,1770 45,1770 45,1770 70,1770"/>
+<path d="M70 1775h10m0 -12v24m16 -24v24m0 -12h10"/>
+<path d="M78 1786l20 -22"/>
+<text x="68" y="1753">EStopOK</text>
+<polyline points="20,1840 45,1840 45,1840 70,1840"/>
+<path d="M70 1845h10m0 -12v24m16 -24v24m0 -12h10"/>
+<path d="M78 1856l20 -22"/>
+<text x="68" y="1823">GuardClosed</text>
+<polyline points="20,1910 45,1910 45,1910 70,1910"/>
+<path d="M70 1915h10m0 -12v24m16 -24v24m0 -12h10"/>
+<path d="M78 1926l20 -22"/>
+<text x="68" y="1893">TankOK</text>
+<polyline points="20,1980 45,1980 45,1980 70,1980"/>
+<path d="M70 1985h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="68" y="1963">JamSwitch</text>
+<polyline points="20,2050 45,2050 45,2050 70,2050"/>
+<path d="M70 2055h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="68" y="2033">JamTimer.Q</text>
 <polyline points="20,2120 45,2120 45,2120 70,2120"/>
 <path d="M70 2125h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="68" y="2103">FillTimer.Q</text>
+<text x="68" y="2103">Stop</text>
+<polyline points="106,2125 215,2125 215,1770 240,1770"/>
+<path d="M240 1775h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="238" y="1753">Run</text>
+<polyline points="276,1775 385,1775 385,1770 410,1770"/>
+<path d="M410 1775h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="408" y="1753">BottleAtFill</text>
+<polyline points="446,1775 555,1775 555,1770 580,1770"/>
+<path d="M580 1775h10m0 -12v24m16 -24v24m0 -12h10"/>
+<path d="M588 1786l20 -22"/>
+<text x="578" y="1753">Filled</text>
 <polyline points="20,2190 45,2190 45,2190 70,2190"/>
 <path d="M70 2195h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="68" y="2173">Filled</text>
-<polyline points="106,2125 215,2125 215,2120 240,2120"/>
-<polyline points="106,2195 215,2195 215,2120 240,2120"/>
-<path d="M240 2125h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="238" y="2103">BottleAtFill</text>
-<polyline points="276,2125 385,2125 385,2120 410,2120"/>
-<path d="M410 2125h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="408" y="2103">Run</text>
-<polyline points="446,2125 555,2125 555,2120 580,2120"/>
-<path d="M580 2125h8m7 -12q-12 12 0 24m7 -24q12 12 0 24m7 -12h7"/>
-<text x="580" y="2103">Filled</text>
+<text x="68" y="2173">Fault</text>
+<polyline points="106,2195 215,2195 215,1840 240,1840"/>
+<path d="M240 1845h10m0 -12v24m16 -24v24m0 -12h10"/>
+<path d="M248 1856l20 -22"/>
+<text x="238" y="1823">Reset</text>
+<polyline points="106,2195 215,2195 215,1910 240,1910"/>
+<path d="M240 1915h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="238" y="1893">BottleAtFill</text>
+<polyline points="106,1775 725,1775 725,1770 750,1770"/>
+<polyline points="106,1845 725,1845 725,1770 750,1770"/>
+<polyline points="106,1915 725,1915 725,1770 750,1770"/>
+<polyline points="106,1985 725,1985 725,1770 750,1770"/>
+<polyline points="106,2055 725,2055 725,1770 750,1770"/>
+<polyline points="616,1775 725,1775 725,1770 750,1770"/>
+<polyline points="276,1845 725,1845 725,1770 750,1770"/>
+<polyline points="276,1915 725,1915 725,1770 750,1770"/>
+<polyline points="106,2275 730,2275 730,1770 750,1770"/>
+<path d="M750 1775h8m7 -12q-12 12 0 24m7 -24q12 12 0 24m7 -12h7"/>
+<text x="750" y="1753">Fault</text>
 <polyline points="20,2360 45,2360 45,2360 70,2360"/>
 <path d="M70 2365h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="68" y="2343">Run</text>
+<text x="68" y="2343">StartEdge.Q</text>
+<polyline points="20,2430 45,2430 45,2430 70,2430"/>
+<path d="M70 2435h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="68" y="2413">Run</text>
 <polyline points="106,2365 215,2365 215,2360 240,2360"/>
+<polyline points="106,2435 215,2435 215,2360 240,2360"/>
 <path d="M240 2365h10m0 -12v24m16 -24v24m0 -12h10"/>
 <path d="M248 2376l20 -22"/>
-<text x="238" y="2343">BottleAtFill</text>
-<polyline points="106,2365 215,2365 215,2430 240,2430"/>
-<path d="M240 2435h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="238" y="2413">Filled</text>
+<text x="238" y="2343">Stop</text>
 <polyline points="276,2365 385,2365 385,2360 410,2360"/>
-<polyline points="276,2435 385,2435 385,2360 410,2360"/>
-<path d="M410 2365h8m7 -12q-12 12 0 24m7 -24q12 12 0 24m7 -12h7"/>
-<text x="410" y="2343">Conveyor</text>
+<path d="M410 2365h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="408" y="2343">EStopOK</text>
+<polyline points="446,2365 555,2365 555,2360 580,2360"/>
+<path d="M580 2365h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="578" y="2343">GuardClosed</text>
+<polyline points="616,2365 725,2365 725,2360 750,2360"/>
+<path d="M750 2365h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="748" y="2343">TankOK</text>
+<polyline points="786,2365 895,2365 895,2360 920,2360"/>
+<path d="M920 2365h10m0 -12v24m16 -24v24m0 -12h10"/>
+<path d="M928 2376l20 -22"/>
+<text x="918" y="2343">Fault</text>
+<polyline points="956,2365 1065,2365 1065,2360 1090,2360"/>
+<path d="M1090 2365h10m0 -12v24m16 -24v24m0 -12h10"/>
+<path d="M1098 2376l20 -22"/>
+<text x="1088" y="2343">BatchCount.Q</text>
+<polyline points="1126,2365 1235,2365 1235,2360 1260,2360"/>
+<path d="M1260 2365h8m7 -12q-12 12 0 24m7 -24q12 12 0 24m7 -12h7"/>
+<text x="1260" y="2343">Run</text>
 <polyline points="20,2600 45,2600 45,2600 70,2600"/>
 <path d="M70 2605h10m0 -12v24m16 -24v24m0 -12h10"/>
 <text x="68" y="2583">Run</text>
@@ -198,19 +188,69 @@
 <path d="M410 2605h10m0 -12v24m16 -24v24m0 -12h10"/>
 <path d="M418 2616l20 -22"/>
 <text x="408" y="2583">Filled</text>
-<polyline points="446,2605 555,2605 555,2600 580,2600"/>
-<path d="M580 2605h8m7 -12q-12 12 0 24m7 -24q12 12 0 24m7 -12h7"/>
-<text x="580" y="2583">Valve</text>
-<polyline points="20,2820 45,2820 45,2820 70,2820"/>
-<path d="M70 2825h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="68" y="2803">Fault</text>
-<polyline points="106,2825 215,2825 215,2820 240,2820"/>
-<path d="M240 2825h8m7 -12q-12 12 0 24m7 -24q12 12 0 24m7 -12h7"/>
-<text x="240" y="2803">Alarm</text>
-<polyline points="20,3040 45,3040 45,3040 70,3040"/>
-<path d="M70 3045h10m0 -12v24m16 -24v24m0 -12h10"/>
-<text x="68" y="3023">BatchCount.Q</text>
-<polyline points="106,3045 215,3045 215,3040 240,3040"/>
-<path d="M240 3045h8m7 -12q-12 12 0 24m7 -24q12 12 0 24m7 -12h7"/>
-<text x="240" y="3023">BatchDone</text>
+<text x="70" y="2672">T#1000ms</text>
+<polyline points="446,2605 555,2605 555,2615 580,2615"/>
+<polyline points="160,2675 555,2675 555,2645 580,2645"/>
+<rect x="580" y="2590" width="140" height="100"/>
+<text x="580" y="2582">FillTimer : TON</text>
+<text x="587" y="2619">IN</text>
+<text x="587" y="2649">PT</text>
+<polyline points="20,2840 45,2840 45,2840 70,2840"/>
+<path d="M70 2845h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="68" y="2823">FillTimer.Q</text>
+<polyline points="20,2910 45,2910 45,2910 70,2910"/>
+<path d="M70 2915h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="68" y="2893">Filled</text>
+<polyline points="106,2845 215,2845 215,2840 240,2840"/>
+<polyline points="106,2915 215,2915 215,2840 240,2840"/>
+<path d="M240 2845h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="238" y="2823">BottleAtFill</text>
+<polyline points="276,2845 385,2845 385,2840 410,2840"/>
+<path d="M410 2845h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="408" y="2823">Run</text>
+<polyline points="446,2845 555,2845 555,2840 580,2840"/>
+<path d="M580 2845h8m7 -12q-12 12 0 24m7 -24q12 12 0 24m7 -12h7"/>
+<text x="580" y="2823">Filled</text>
+<polyline points="20,3080 45,3080 45,3080 70,3080"/>
+<path d="M70 3085h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="68" y="3063">Run</text>
+<polyline points="106,3085 215,3085 215,3080 240,3080"/>
+<path d="M240 3085h10m0 -12v24m16 -24v24m0 -12h10"/>
+<path d="M248 3096l20 -22"/>
+<text x="238" y="3063">BottleAtFill</text>
+<polyline points="106,3085 215,3085 215,3150 240,3150"/>
+<path d="M240 3155h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="238" y="3133">Filled</text>
+<polyline points="276,3085 385,3085 385,3080 410,3080"/>
+<polyline points="276,3155 385,3155 385,3080 410,3080"/>
+<path d="M410 3085h8m7 -12q-12 12 0 24m7 -24q12 12 0 24m7 -12h7"/>
+<text x="410" y="3063">Conveyor</text>
+<polyline points="20,3320 45,3320 45,3320 70,3320"/>
+<path d="M70 3325h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="68" y="3303">Run</text>
+<polyline points="106,3325 215,3325 215,3320 240,3320"/>
+<path d="M240 3325h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="238" y="3303">BottleAtFill</text>
+<polyline points="276,3325 385,3325 385,3320 410,3320"/>
+<path d="M410 3325h10m0 -12v24m16 -24v24m0 -12h10"/>
+<path d="M418 3336l20 -22"/>
+<text x="408" y="3303">Filled</text>
+<polyline points="446,3325 555,3325 555,3320 580,3320"/>
+<path d="M580 3325h8m7 -12q-12 12 0 24m7 -24q12 12 0 24m7 -12h7"/>
+<text x="580" y="3303">Valve</text>
+<polyline points="20,3540 45,3540 45,3540 70,3540"/>
+<path d="M70 3545h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="68" y="3523">Fault</text>
+<polyline points="106,3545 215,3545 215,3540 240,3540"/>
+<path d="M240 3545h8m7 -12q-12 12 0 24m7 -24q12 12 0 24m7 -12h7"/>
+<text x="240" y="3523">Alarm</text>
+<polyline points="20,3760 45,3760 45,3760 70,3760"/>
+<path d="M70 3765h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="68" y="3743">BatchCount.Q</text>
+<polyline points="106,3765 215,3765 215,3760 240,3760"/>
+<path d="M240 3765h8m7 -12q-12 12 0 24m7 -24q12 12 0 24m7 -12h7"/>
+<text x="240" y="3743">BatchDone</text>
+<polyline points="20,1765 50,1765 50,2275 70,2275"/>
+<path d="M70 2275h10m0 -12v24m16 -24v24m0 -12h10"/>
+<text x="68" y="2253">FillBlocked</text>
 </svg>

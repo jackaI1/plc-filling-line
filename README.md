@@ -12,6 +12,8 @@ In this personal project, I run five virtual bottles along a conveyor using a
 browser control panel. I can watch them fill, stall the conveyor or open a guard.
 Then I clear the cause, reset and start again. A maintenance log records the
 repair work and opens a nozzle inspection order after a short practice interval.
+I can also hold the fill sensor on to see how the controller handles a bottle
+that appears not to leave the filling position.
 
 Follow the setup below, open **http://127.0.0.1:8765**, and press **Start line**.
 The panel shows the conveyor, valve, sensors and bottle count. For a quick
@@ -93,6 +95,31 @@ neither action restarts the line, then resets and starts a full five-bottle batc
 It runs the same compiled controller and plant as the browser, with an isolated
 in-memory log. It opens no server and leaves the browser's saved work orders alone.
 
+## Check a bottle that does not leave
+
+I wanted a more useful warning than a general conveyor timeout when a filled
+bottle stays under the nozzle. Select **Hold fill sensor on**, then **Start line**.
+After the one-second fill, the controller allows one second for the bottle to
+leave the sensor. If the signal stays on, it stops the motor and valve and shows
+**Fill position did not clear**. The maintenance log opens one work order for
+the filling station.
+
+Pressing Reset while the sensor is still held on leaves the fault active, even
+though Reset discards the virtual bottle. Release the checkbox, reset, then
+start a new batch. Releasing the sensor or closing the work order alone leaves
+the line stopped. This same check catches a conveyor stalled at the fill position.
+It cannot tell a physical jam from a sensor reading stuck on; the message asks
+me to check both.
+
+To run this recovery in the terminal without starting a server:
+
+```sh
+python -m fillingline.practice --fault fill-sensor
+```
+
+The exercise checks the refused reset, releases the sensor, closes the work
+order and completes a fresh five-bottle batch.
+
 ## How the controller works
 
 A programmable logic controller (PLC) repeatedly reads sensors and decides
@@ -122,8 +149,10 @@ python -m unittest discover -s tests -v
 
 Continuous integration (CI), the automated checks GitHub runs for changes,
 rebuilds the controller and checks that its exported code matches the ladder.
-Tests exercise timed filling, counting, fault recovery, 2,000 randomized input
+The 30 tests exercise timed filling, counting, fault recovery, 2,000 randomized input
 steps, saved maintenance records, the terminal walkthrough and the browser panel.
+They check the fill-clearance timeout at the scan before and exactly at its
+one-second limit, output shutdown in that scan, and reset with a sensor held on.
 The browser test also checks the panel at desktop and phone widths. It closes its
 test page, browser and server and verifies that the server port is closed.
 

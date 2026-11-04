@@ -9,6 +9,17 @@ from fillingline.practice import run_practice
 
 
 class PracticeTests(unittest.TestCase):
+    def test_fill_sensor_exercise_checks_refused_reset_and_full_recovery(self):
+        states = {s["step"]: s for s in run_practice("fill-sensor")}
+        for step in ("tripped", "reset_refused", "cause_cleared", "order_closed"):
+            self.assertTrue(states[step]["outputs"]["FillBlocked"])
+            self.assertTrue(states[step]["outputs"]["Alarm"])
+            self.assertFalse(states[step]["outputs"]["Run"])
+        self.assertEqual(states["tripped"]["orders"][0]["asset"], "FV-01")
+        self.assertFalse(states["reset"]["outputs"]["FillBlocked"])
+        self.assertEqual(states["complete"]["count"], 5)
+        self.assertEqual(states["complete"]["orders"][0]["status"], "closed")
+
     def test_native_recovery_checkpoints_match_outputs_and_ledger(self):
         states = {state["step"]: state for state in run_practice()}
         self.assertEqual(list(states), ["tripped", "cause_cleared", "order_closed",
