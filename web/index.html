@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Filling line | PLC training bench</title><link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script></head>
+<body>
+<header><div><h1>Filling line</h1><p>PLC training bench · simulated equipment</p></div><div id="connection" role="status">Connecting…</div></header>
+<main>
+<section class="process" aria-labelledby="line-title">
+  <div class="section-heading"><h2 id="line-title">Line-01</h2><strong id="status" role="status">Stopped</strong></div>
+  <div class="schematic" role="region" aria-label="Line schematic, scroll horizontally on small screens" tabindex="0"><svg viewBox="0 0 920 300" role="img" aria-label="Bottle conveyor with fill valve, tank and exit sensor">
+    <defs><pattern id="rollers" width="35" height="30" patternUnits="userSpaceOnUse"><circle cx="17" cy="15" r="10" fill="#b5c8d5" stroke="#47647b"/></pattern></defs>
+    <path d="M45 225H870V257H45Z" fill="url(#rollers)" stroke="#47647b" stroke-width="3"/>
+    <path d="M80 258V278M835 258V278" stroke="#47647b" stroke-width="8"/>
+    <rect x="303" y="20" width="160" height="67" rx="8" fill="#d4e8eb" stroke="#47647b" stroke-width="3"/>
+    <text x="383" y="47" text-anchor="middle">Product tank</text><text x="383" y="69" text-anchor="middle" id="tank-label">Level healthy</text>
+    <path d="M383 88V136" stroke="#47647b" stroke-width="12"/>
+    <path id="valve" d="M367 110L399 132V110L367 132Z" fill="#8498a8" stroke="#243b53" stroke-width="2"/>
+    <path id="stream" d="M383 136V195" stroke="#007d7a" stroke-width="7" stroke-dasharray="5 3" visibility="hidden"/>
+    <g id="bottle"><path d="M-10 169V183L-20 193V222H20V193L10 183V169Z" fill="#f4fbff" stroke="#243b53" stroke-width="2"/><rect id="liquid" x="-17" y="220" width="34" height="0" fill="#007d7a"/><path d="M-11 169H11" stroke="#243b53" stroke-width="4"/></g>
+    <path d="M383 224V246M782 224V246" stroke="#d2621a" stroke-width="5"/>
+    <text x="383" y="295" text-anchor="middle">Fill sensor</text><text x="782" y="295" text-anchor="middle">Exit sensor</text>
+    <text x="55" y="203" id="motor-label">CV-01 · stopped</text><text x="485" y="119">FV-01 · fill valve</text>
+  </svg></div>
+  <div class="readouts"><div><span>Batch</span><strong id="count">0 / 5</strong></div><div><span>Fill timer</span><strong id="fill-time">0.00 s</strong></div><div><span>Running time</span><strong id="runtime">0.0 s</strong></div><div><span>Scan interval</span><strong>50 ms</strong></div></div>
+  <div class="controls"><button id="start" class="primary" data-command="start">Start line</button><button id="stop" class="stop" data-command="stop">Stop line</button><button id="reset" data-command="reset">Reset batch / discard bottle</button></div>
+  <p class="hint">A trip needs its cause cleared, then Reset and a fresh Start. Reset discards the current simulated bottle.</p>
+  <p id="error" role="alert"></p>
+</section>
+<aside aria-labelledby="fault-title"><h2 id="fault-title">Fault injection</h2><p>Change a sensor or stall the conveyor to test the controller.</p>
+  <label><input type="checkbox" data-fault="EStopOK" data-invert> Emergency stop pressed</label>
+  <label><input type="checkbox" data-fault="GuardClosed" data-invert> Guard open</label>
+  <label><input type="checkbox" data-fault="TankOK" data-invert> Tank low</label>
+  <label><input type="checkbox" data-fault="JamSwitch"> Jam switch active</label>
+  <label><input type="checkbox" data-fault="jammed"> Stall conveyor (timer trip)</label>
+  <h3>I/O monitor</h3><div id="io" class="io"></div><p class="hint">Green = true. Inputs and outputs come from the compiled PLC.</p>
+</aside>
+<section class="maintenance" aria-labelledby="maintenance-title"><div class="section-heading"><h2 id="maintenance-title">Maintenance log</h2><span>Local SQLite records</span></div>
+<p>Trips create corrective work orders. An accelerated 30-second running interval creates a nozzle inspection task.</p>
+<form id="order-form"><label>Asset<select name="asset"><option>CV-01</option><option>FV-01</option><option>Line-01</option></select></label><label>Type<select name="kind"><option value="corrective">Corrective</option><option value="preventive">Preventive</option></select></label><label class="issue">Issue<input name="issue" required maxlength="300" placeholder="e.g. Inspect conveyor tracking"></label><button>Add work order</button></form>
+<div class="table-scroll"><table><thead><tr><th>Order / asset</th><th>Issue</th><th>Status / resolution</th></tr></thead><tbody id="orders"></tbody></table></div>
+<button id="service" data-command="service">Acknowledge preventive service</button><p class="hint">Stop the line and close a preventive order before acknowledging service.</p>
+</section>
+<section class="events"><h2>Event history</h2><ol id="events"></ol></section>
+</main><footer>Training simulation only. Software interlocks are not safety-rated controls. No physical equipment is connected.</footer>
+</body></html>
