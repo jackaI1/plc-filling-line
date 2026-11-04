@@ -1,5 +1,56 @@
 # Control and maintenance notes
 
+## Build and edit the ladder
+
+The controller uses IEC 61131-3 ladder logic in `plc/line.xml` (PLCopen TC6).
+The pinned OpenPLC v3 editor's generator exports it to Structured Text in
+`plc/line.st`. OpenPLC's matiec compiler translates that to C; `plc/bridge.c`
+exposes the compiled controller to Python. A native library executes every scan.
+
+```text
+plc/line.xml
+  -> tools/openplc_export.py (upstream OpenPLC ladder generator)
+  -> plc/line.st
+  -> matiec iec2c -> .build/generated/POUS.c + plc/bridge.c
+  -> .build/line.so or line.dylib
+  -> fillingline/controller.py (sample inputs, execute scan, read outputs)
+  <-> fillingline/plant.py (sensors, bottle motion and liquid level)
+  -> fillingline/server.py -> web/ (HMI and SQLite maintenance log)
+```
+
+The first build fetches exact editor and compiler revisions under `.build/`.
+Their source and licenses stay in those checkouts. The headless exporter replaces
+only UI translation lookup; it uses the upstream parser, standard-block
+definitions and ladder generator unchanged. This is the v3 toolchain, not a
+claim to support every OpenPLC v4 project format. The XML includes wire
+coordinates for inspection in the legacy OpenPLC v3/Beremiz PLCopen editor.
+Automated import/export and schema validation are tested; no physical PLC or
+OpenPLC web runtime deployment is claimed.
+
+After changing `plc/line.xml`, run from the repository root with the development
+environment activated:
+
+```sh
+python tools/openplc_export.py
+python tools/render_ladder.py
+python tools/build.py
+python tools/validate_schema.py
+python -m playwright install chromium
+python -m unittest discover -s tests -v
+```
+
+`tools/ladder.py` independently checks the supported contact/coil/TON/CTU/R_TRIG
+graph and rejects broken links, cycles and unsupported elements. CI rejects
+stale Structured Text, validates the PLCopen schema and compiles the native IEC
+code before testing. Screenshots are CI artifacts; the README image contains
+only fictional test records.
+
+`python -m fillingline.practice` runs a bounded conveyor-stall exercise against
+that same native controller. Each checkpoint reports the actual simulated scan
+time and observed outputs, counter and work orders. It raises an error if a trip,
+reset or completed batch fails its expected state, and always closes its native
+controller and in-memory SQLite connection. It uses virtual time without sleeps.
+
 ## I/O map
 
 The adapter samples these BOOL inputs at each 50 ms virtual scan. These are named simulation points, not claimed hardware addresses.
