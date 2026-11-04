@@ -1,0 +1,31 @@
+name: PLC simulation
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  compiled-ladder-and-hmi:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install compiler prerequisites
+        run: sudo apt-get update -qq && sudo apt-get install -y autoconf automake bison flex build-essential
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: Compile ladder through pinned OpenPLC matiec
+        run: python tools/build.py > /tmp/plc-build.log 2>&1 || { tail -80 /tmp/plc-build.log; exit 1; }
+      - run: python tools/validate_schema.py
+      - name: Native scan, simulated plant, CMMS and browser acceptance tests
+        run: python -m unittest discover -s tests -v
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hmi-evidence
+          path: artifacts/
+          if-no-files-found: ignore
