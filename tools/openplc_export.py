@@ -64,6 +64,15 @@ def export(path, editor=None):
     project, error = LoadProject(str(path))
     if error:
         raise ValueError(str(error))
+    # The XML addresses define the simulated panel's terminal schedule. Native
+    # host I/O is passed by value through bridge.c, not mapped to PLC hardware.
+    # IEC VAR_INPUT/VAR_OUTPUT parameters cannot carry AT locations in matiec.
+    # Remove only address metadata from the in-memory export model; preserve
+    # names, logic and the canonical XML used by the drawing and tag checks.
+    for variable in project.xpath(
+            "//*[local-name()='interface']/*[local-name()='inputVars' or local-name()='outputVars']"
+            "/*[local-name()='variable'][@address]"):
+        variable.attrib.pop("address")
     errors, warnings = [], []
     generator = ProgramGenerator(Controller(), project, errors, warnings)
     # Upstream includes verbose debug prints for parallel contact paths.

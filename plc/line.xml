@@ -20,79 +20,79 @@
       <pou name="FillingLine" pouType="program">
         <interface>
           <inputVars>
-            <variable name="Start">
+            <variable name="Start" address="%IX0.0">
               <type>
                 <BOOL />
               </type>
             </variable>
-            <variable name="Stop">
+            <variable name="Stop" address="%IX0.1">
               <type>
                 <BOOL />
               </type>
             </variable>
-            <variable name="Reset">
+            <variable name="Reset" address="%IX0.2">
               <type>
                 <BOOL />
               </type>
             </variable>
-            <variable name="EStopOK">
+            <variable name="EStopOK" address="%IX0.3">
               <type>
                 <BOOL />
               </type>
             </variable>
-            <variable name="GuardClosed">
+            <variable name="GuardClosed" address="%IX0.4">
               <type>
                 <BOOL />
               </type>
             </variable>
-            <variable name="TankOK">
+            <variable name="TankOK" address="%IX0.5">
               <type>
                 <BOOL />
               </type>
             </variable>
-            <variable name="BottleAtFill">
+            <variable name="BottleAtFill" address="%IX0.6">
               <type>
                 <BOOL />
               </type>
             </variable>
-            <variable name="ExitSensor">
+            <variable name="ExitSensor" address="%IX0.7">
               <type>
                 <BOOL />
               </type>
             </variable>
-            <variable name="JamSwitch">
+            <variable name="JamSwitch" address="%IX1.0">
               <type>
                 <BOOL />
               </type>
             </variable>
           </inputVars>
           <outputVars>
-            <variable name="Run">
+            <variable name="Run" address="%QX0.0">
               <type>
                 <BOOL />
               </type>
             </variable>
-            <variable name="Conveyor">
+            <variable name="Conveyor" address="%QX0.1">
               <type>
                 <BOOL />
               </type>
             </variable>
-            <variable name="Valve">
+            <variable name="Valve" address="%QX0.2">
               <type>
                 <BOOL />
               </type>
             </variable>
-            <variable name="Alarm">
+            <variable name="Alarm" address="%QX0.3">
               <type>
                 <BOOL />
               </type>
             </variable>
-            <variable name="BatchDone">
+            <variable name="BatchDone" address="%QX0.4">
               <type>
                 <BOOL />
               </type>
             </variable>
-            <variable name="FillBlocked">
+            <variable name="FillBlocked" address="%QX0.5">
               <type>
                 <BOOL />
               </type>

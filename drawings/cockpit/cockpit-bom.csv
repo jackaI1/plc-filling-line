@@ -1,0 +1,6 @@
+item,description,quantity,unit
+J-6,Six-pin panel connector,1,each
+LED-24,24 V panel indicator,3,each
+SW-TOGGLE,24 V toggle switch,3,each
+WIRE:18 AWG:black,18 AWG black hookup wire,2.4,m
+WIRE:18 AWG:red,18 AWG red hookup wire,2.4,m

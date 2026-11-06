@@ -1,0 +1,36 @@
+device,part,description,capacity,mount,x_mm,y_mm,width_mm,height_mm
+J0,INLET-24,24 V DC supply inlet,2,panel,30,40,45,40
+F1,FUSE-1A,1 A control fuse,2,panel,95,40,45,40
+PLC1,PLC-24,Simulated 24 V PLC with 9 inputs and 6 outputs,17,panel,160,40,45,40
+X1,TB-2,Two-sided feedthrough terminal,2,panel,225,40,45,40
+S1,CONTACT-24,24 V simulated dry contact,2,field,290,40,45,40
+X2,TB-2,Two-sided feedthrough terminal,2,panel,290,40,45,40
+S2,CONTACT-24,24 V simulated dry contact,2,field,355,40,45,40
+X3,TB-2,Two-sided feedthrough terminal,2,panel,355,40,45,40
+S3,CONTACT-24,24 V simulated dry contact,2,field,30,105,45,40
+X4,TB-2,Two-sided feedthrough terminal,2,panel,30,105,45,40
+S4,CONTACT-24,24 V simulated dry contact,2,field,95,105,45,40
+X5,TB-2,Two-sided feedthrough terminal,2,panel,95,105,45,40
+S5,CONTACT-24,24 V simulated dry contact,2,field,160,105,45,40
+X6,TB-2,Two-sided feedthrough terminal,2,panel,160,105,45,40
+S6,CONTACT-24,24 V simulated dry contact,2,field,225,105,45,40
+X7,TB-2,Two-sided feedthrough terminal,2,panel,225,105,45,40
+S7,CONTACT-24,24 V simulated dry contact,2,field,290,105,45,40
+X8,TB-2,Two-sided feedthrough terminal,2,panel,290,105,45,40
+S8,CONTACT-24,24 V simulated dry contact,2,field,355,105,45,40
+X9,TB-2,Two-sided feedthrough terminal,2,panel,355,105,45,40
+S9,CONTACT-24,24 V simulated dry contact,2,field,30,170,45,40
+X10,TB-2,Two-sided feedthrough terminal,2,panel,30,170,45,40
+H10,LED-24,24 V panel indicator,2,panel,95,170,45,40
+X11,TB-2,Two-sided feedthrough terminal,2,panel,160,170,45,40
+K1,RELAY-24,24 V conveyor contactor coil,2,field,225,170,45,40
+X12,TB-2,Two-sided feedthrough terminal,2,panel,225,170,45,40
+Y1,VALVE-24,24 V filling-valve solenoid,2,field,290,170,45,40
+X13,TB-2,Two-sided feedthrough terminal,2,panel,290,170,45,40
+H13,LED-24,24 V panel indicator,2,panel,355,170,45,40
+X14,TB-2,Two-sided feedthrough terminal,2,panel,30,235,45,40
+H14,LED-24,24 V panel indicator,2,panel,95,235,45,40
+X15,TB-2,Two-sided feedthrough terminal,2,panel,160,235,45,40
+H15,LED-24,24 V panel indicator,2,panel,225,235,45,40
+D24,DIST-24,Internally common +24 V distribution,11,panel,290,235,45,40
+D0,DIST-0,Internally common 0 V distribution,8,panel,355,235,45,40

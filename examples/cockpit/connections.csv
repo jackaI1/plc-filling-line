@@ -1,0 +1,10 @@
+wire,from_device,from_pin,to_device,to_pin,gauge,colour,length_m,sheet
+100,J1,1,S1,1,18 AWG,red,.4,IO
+101,S1,2,H1,+,18 AWG,red,.4,IO
+102,H1,-,J1,4,18 AWG,black,.8,IO
+103,J1,2,S2,1,18 AWG,red,.4,IO
+104,S2,2,H2,+,18 AWG,red,.4,IO
+105,H2,-,J1,5,18 AWG,black,.8,IO
+106,J1,3,S3,1,18 AWG,red,.4,IO
+107,S3,2,H3,+,18 AWG,red,.4,IO
+108,H3,-,J1,6,18 AWG,black,.8,IO

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Filling line operator</title><link rel="stylesheet" href="operator.css"></head>
+<body>
+<header><div><h1>Filling line</h1><p>Five bottles, one batch. A simulated operator station.</p></div><span id="connection" role="status">Connecting to controller</span></header>
+<main>
+<section id="alarm" role="alert" data-state="clear"><strong id="alarm-text">No active filling-station alarm</strong><span id="alarm-detail">Start a batch to watch the line.</span><button id="ack" disabled>Acknowledge alarm</button></section>
+<section class="overview" aria-label="Line overview"><div class="drawing">
+<svg viewBox="0 0 800 310" role="img" aria-label="Animated bottle conveyor, motor and filling valve">
+<defs><pattern id="belt" width="38" height="20" patternUnits="userSpaceOnUse"><path d="M0 0L20 20" stroke="#879ba8" stroke-width="3"/></pattern></defs>
+<path d="M60 240H740" stroke="#233b4c" stroke-width="18" stroke-linecap="round"/>
+<rect id="conveyor" x="60" y="230" width="680" height="20" fill="url(#belt)"/>
+<path d="M100 252V285M700 252V285" stroke="#566d7e" stroke-width="6"/>
+<g id="motor"><circle cx="98" cy="210" r="24" fill="#9cabb5" stroke="#233b4c" stroke-width="3"/><path id="rotor" d="M98 190V230M78 210H118" stroke="#233b4c" stroke-width="4"/></g>
+<text x="65" y="175">Conveyor motor</text>
+<path d="M400 40V100" stroke="#536d7e" stroke-width="10"/>
+<path id="valve" d="M380 80L420 110V80L380 110Z" fill="#9cabb5" stroke="#233b4c" stroke-width="2"/>
+<path id="flow" d="M400 112V160" stroke="#008a9c" stroke-width="7" stroke-dasharray="8 6" visibility="hidden"/>
+<text x="440" y="90">Fill valve</text>
+<path d="M395 42H560V65" fill="none" stroke="#536d7e" stroke-width="8"/>
+<g id="bottle" transform="translate(60 0)"><path d="M-12 153V169L-22 181V228H22V181L12 169V153Z" fill="#f6fcff" stroke="#233b4c" stroke-width="3"/><rect id="bottle-fill" x="-18" y="224" width="36" height="0" fill="#3fa9be"/><path d="M-13 151H13" stroke="#233b4c" stroke-width="5"/></g>
+<path d="M400 260V276M680 260V276" stroke="#00697a" stroke-width="4"/>
+<text x="343" y="300">Fill sensor</text><text x="635" y="300">Exit sensor</text>
+</svg>
+</div><dl class="states"><div><dt>Motor</dt><dd id="motor-state">Waiting</dd></div><div><dt>Valve</dt><dd id="valve-state">Waiting</dd></div><div><dt>Bottles filled</dt><dd><span id="count">0</span> / 5</dd></div></dl></section>
+<section class="controls" aria-label="Operator controls"><button id="start" disabled>Start line</button><button id="stop" disabled>Stop line</button><button id="reset" disabled>Reset batch</button><label><input id="hold" type="checkbox" disabled>Hold fill sensor on</label><p>Reset discards the current virtual bottle. Clear the cause first; resetting leaves the line stopped.</p></section>
+<section class="trend"><h2>Fill count over time</h2><p>The latest 60 seconds of received controller readings. A reset starts the count again.</p><svg id="trend" viewBox="0 0 1000 180" role="img" aria-label="Fill-count trend from zero to five bottles" data-last-count="0"><path d="M30 15V150H980M30 15H980M30 82H980" fill="none" stroke="#b4c2ca"/><text x="8" y="22">5</text><text x="8" y="154">0</text><polyline id="trend-line" fill="none" stroke="#006d7c" stroke-width="3"/><text x="30" y="176">Earlier</text><text x="930" y="176">Now</text></svg></section>
+<details><summary>Controller readings</summary><p>Values below come through FUXA's Modbus TCP connection to the compiled ladder program.</p><table><thead><tr><th>Tag</th><th>Value</th></tr></thead><tbody id="tags"></tbody></table></details>
+<p id="error" role="status"></p>
+</main><footer>Practice simulation only. No physical equipment or safety circuit is connected. <a href="/editor" target="_blank" rel="noopener">Open FUXA editor</a></footer>
+<script src="/socket.io/socket.io.js"></script><script src="operator.js"></script>
+</body></html>

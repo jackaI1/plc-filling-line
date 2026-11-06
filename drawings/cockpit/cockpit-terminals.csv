@@ -1,0 +1,19 @@
+device,pin,address,signal,wire,destination,gauge,colour
+J1,1,,,100,S1:1,18 AWG,red
+S1,1,,,100,J1:1,18 AWG,red
+S1,2,,,101,H1:+,18 AWG,red
+H1,'+,,,101,S1:2,18 AWG,red
+H1,'-,,,102,J1:4,18 AWG,black
+J1,4,,,102,H1:-,18 AWG,black
+J1,2,,,103,S2:1,18 AWG,red
+S2,1,,,103,J1:2,18 AWG,red
+S2,2,,,104,H2:+,18 AWG,red
+H2,'+,,,104,S2:2,18 AWG,red
+H2,'-,,,105,J1:5,18 AWG,black
+J1,5,,,105,H2:-,18 AWG,black
+J1,3,,,106,S3:1,18 AWG,red
+S3,1,,,106,J1:3,18 AWG,red
+S3,2,,,107,H3:+,18 AWG,red
+H3,'+,,,107,S3:2,18 AWG,red
+H3,'-,,,108,J1:6,18 AWG,black
+J1,6,,,108,H3:-,18 AWG,black

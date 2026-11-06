@@ -15,14 +15,21 @@ repair work and opens a nozzle inspection order after a short practice interval.
 I can also hold the fill sensor on to see how the controller handles a bottle
 that appears not to leave the filling position.
 
+I also wanted to trace each simulated sensor back to a numbered wire and watch
+the controller from a separate operator screen. The project now includes a
+panel-drawing generator and a second screen that reads the running controller
+through a standard industrial connection. I can print the drawings, check the
+parts list, and practise acknowledging a fault before resetting the line.
+
 Follow the setup below, open **http://127.0.0.1:8765**, and press **Start line**.
-The panel shows the conveyor, valve, sensors and bottle count. For a quick
-terminal walkthrough after building, run `python -m fillingline.practice`.
-Everything here is simulated; it does not connect to real equipment.
+The original panel shows the conveyor, valve, sensors and bottle count. For a
+quick terminal walkthrough after building, run `python -m fillingline.practice`.
+For the drawing exports and the separate operator screen, follow the two
+sections below. Everything here is simulated; it does not connect to real equipment.
 
 ## Run locally
 
-Requires Python 3.9+, Git and a C/C++ compiler. Install the build tools for your
+Requires Python 3.10+, Git and a C/C++ compiler. Install the build tools for your
 operating system first. On Ubuntu / Debian:
 
 ```sh
@@ -120,6 +127,81 @@ python -m fillingline.practice --fault fill-sensor
 The exercise checks the refused reset, releases the sensor, closes the work
 order and completes a fresh five-bottle batch.
 
+## Use the separate operator screen
+
+I use FUXA, a free web-based operator interface, to watch the same compiled
+controller through Modbus TCP, a common way for industrial devices to exchange
+values over a network. This runs a separate simulated line from the original
+maintenance panel. Its bottle, conveyor motor and valve follow the controller's
+live values. The count trend shows how the batch progresses.
+
+With Node.js 22 or 24 installed, install the screen's dependencies once:
+
+```sh
+npm --prefix scada ci --ignore-scripts=false
+```
+
+Then use two terminals from this folder, with the Python environment active:
+
+```sh
+# Terminal 1: controller, simulated plant and local Modbus connection
+python -m fillingline.modbus
+```
+
+```sh
+# Terminal 2: operator screen
+npm --prefix scada start
+```
+
+Open **http://127.0.0.1:1881/resources/operator/index.html** and press **Start line**.
+Select **Hold fill sensor on** to cause a fill-position fault. **Acknowledge alarm**
+records that I have seen it; it leaves the fault and stopped outputs alone.
+Reset is refused while the sensor is held on. Release it, press **Reset batch**,
+then press **Start line** for a fresh batch. Stop both terminals with Ctrl+C.
+
+The FUXA editor at **http://127.0.0.1:1881** contains the imported line view,
+Modbus tags and native alarm definition. My operator page is served by FUXA and
+embedded in that view; it receives tag values from FUXA rather than contacting
+the plant directly. The [tag map and connection notes](docs/scada.md) explain
+the addresses and runtime files. Both servers bind to this computer only.
+
+![FUXA operator screen after a completed simulated batch, with the live count trend](docs/scada.png)
+
+## Trace the panel wiring
+
+I use three small CSV tables to describe the devices, their pins and the wires
+between them. The tool catches two wires using the same terminal, unused pins,
+repeated wire numbers and connectors with more occupied pins than allowed.
+It then draws the connections and adds up the parts and wire lengths.
+
+The [filling-line drawing set](drawings/filling-line/filling-line.pdf) includes
+power distribution, sensor and output wiring, a terminal schedule, a panel
+layout and a parts list. All 15 external controller points have one numbered
+wired terminal. The [cockpit-style example](drawings/cockpit/cockpit.pdf) is a
+smaller panel with three toggle switches and three indicator lamps.
+
+After the Python setup above, regenerate both sets with:
+
+```sh
+python -m wiring examples/filling-line --plc plc/line.xml --output drawings/filling-line --name filling-line
+python -m wiring examples/cockpit --output drawings/cockpit --name cockpit
+```
+
+Open the `.qet` file in QElectroTech, a free electrical drawing editor, or the
+`.dxf` file in a CAD viewer. Each output folder also has a printable PDF,
+a parts list in CSV and Excel, and a numbered terminal schedule. To check an
+edited table without writing exports:
+
+```sh
+python -m wiring examples/filling-line --plc plc/line.xml --check
+```
+
+The addresses are recorded in the ladder source, so the checker catches a
+missing, repeated or mismatched controller connection. Connector capacity means
+occupied pins, not allowable current. These are simulated 24 V control drawings
+with generic parts; they are not construction drawings for a powered machine.
+See [the CSV format and drawing notes](docs/wiring.md) before editing them.
+
 ## How the controller works
 
 A programmable logic controller (PLC) repeatedly reads sensors and decides
@@ -149,12 +231,18 @@ python -m unittest discover -s tests -v
 
 Continuous integration (CI), the automated checks GitHub runs for changes,
 rebuilds the controller and checks that its exported code matches the ladder.
-The 30 tests exercise timed filling, counting, fault recovery, 2,000 randomized input
-steps, saved maintenance records, the terminal walkthrough and the browser panel.
-They check the fill-clearance timeout at the scan before and exactly at its
-one-second limit, output shutdown in that scan, and reset with a sensor held on.
-The browser test also checks the panel at desktop and phone widths. It closes its
-test page, browser and server and verifies that the server port is closed.
+The 57 tests exercise timed filling, counting, fault recovery, 2,000 randomized
+input steps, saved maintenance records and the terminal walkthrough. They check
+the fill-clearance timeout just before and exactly at its one-second limit,
+same-scan output shutdown, and reset with a sensor held on.
+
+The wiring checks cover duplicate terminals, unconnected pins, connector
+occupancy, all 15 drawing addresses, exact BOM totals, literal spreadsheet text,
+QElectroTech connections and native DXF sheets. Exports are reopened for checks.
+The SCADA tests start the real FUXA server and compiled plant, change inputs,
+check live tags and native alarm acknowledgement, and finish a five-bottle batch.
+Both browser screens are checked at desktop and phone widths. Tests close their
+pages, browsers and servers, verify owned process cleanup and check closed ports.
 
 ## Scope
 

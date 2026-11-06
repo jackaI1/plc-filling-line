@@ -53,7 +53,20 @@ controller and in-memory SQLite connection. It uses virtual time without sleeps.
 
 ## I/O map
 
-The adapter samples these BOOL inputs at each 50 ms virtual scan. These are named simulation points, not claimed hardware addresses.
+The adapter samples these BOOL inputs at each 50 ms virtual scan. The XML now
+assigns `%IX0.0` through `%IX1.0` to these nine inputs and `%QX0.0` through
+`%QX0.5` to Run, Conveyor, Valve, Alarm, BatchDone and FillBlocked. These
+are the 24 V demonstration panel's drawing addresses, not commissioned hardware.
+`Filled` remains an internal latch. The drawing checker reads the attributes
+from the ladder, so changing an address requires updating the terminal schedule.
+
+The native host adapter passes these values directly to the compiled program.
+The exporter removes address attributes only from its in-memory model before
+calling the upstream generator: matiec does not permit `AT` locations on
+`VAR_INPUT` or `VAR_OUTPUT` parameters. The checked-in XML retains every
+address. No ladder logic is replaced or interpreted in Python. The separate
+[SCADA tag map](scada.md) documents the Modbus transport addresses; those are
+protocol offsets, not the panel's IEC byte/bit addresses.
 
 | Bit | Input | Meaning when true |
 | --- | --- | --- |
