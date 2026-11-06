@@ -79,7 +79,8 @@ class ScadaHMITests(unittest.TestCase):
                         try:
                             browser_processes = [row for row in owned_descendants(os.getpid()) if row['pid'] not in {p.pid for p,_ in processes}]
                             (evidence / 'scada-browser-processes.json').write_text(json.dumps({'owner':'tests/test_scada_hmi.py','cleanup':'page.close; browser.close; sync_playwright exit','processes':browser_processes},indent=2))
-                            page = browser.new_page(viewport={'width':1280,'height':1024})
+                            # CI's POSIX locale is not a BCP 47 browser language tag.
+                            page = browser.new_page(viewport={'width':1280,'height':1024}, locale='en-US')
                             try:
                                 errors = []
                                 page.on('pageerror', lambda error: errors.append(str(error)))
