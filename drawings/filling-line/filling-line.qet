@@ -1,0 +1,1721 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project title="filling-line" version="0.90" uuid="{4a219468-8b87-5329-a894-178d57f84b98}">
+  <diagram title="filling-line: terminal wiring 1" version="0.90" uuid="{4685c91f-14cb-5cf8-8eed-5ef04b82c4f8}" order="0" cols="14" colsize="60" rows="8" rowsize="80" height="660" displaycols="true" displayrows="true" author="Jack Lai" date="null" folio="%id/%total" filename="">
+    <defaultconductor type="multi" numsize="9" />
+    <elements>
+      <element x="170" y="60" orientation="0" type="embed://panel/left.elmt" uuid="{da9a3427-8f26-5728-86d3-abc3ff77d834}">
+        <terminals>
+          <terminal id="0" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S1:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{c5360bbc-8f39-58ea-a8b5-7e5117d6138d}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S1:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S1:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="60" orientation="0" type="embed://panel/right.elmt" uuid="{60bf5e0e-ea22-53c1-b52b-3ce1372f3b6d}">
+        <terminals>
+          <terminal id="1" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X1:F" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{53ead035-61e3-536a-8f8f-044a6f6c5b10}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X1:F</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X1:F</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="116" orientation="0" type="embed://panel/left.elmt" uuid="{bc182830-cac3-5657-9d3a-1287c995293f}">
+        <terminals>
+          <terminal id="2" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X1:P" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{f3f75eaa-1038-5b44-a3ba-0273404a5f38}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X1:P</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X1:P</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="116" orientation="0" type="embed://panel/right.elmt" uuid="{62233d83-fd5b-514d-af39-6616428c2e32}">
+        <terminals>
+          <terminal id="3" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:%IX0.0" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{12c42521-fb17-597d-9b5d-62eed5c7822d}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:%IX0.0</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:%IX0.0</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="172" orientation="0" type="embed://panel/left.elmt" uuid="{092c0f8e-779d-5b95-b4e9-9441df806902}">
+        <terminals>
+          <terminal id="4" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S2:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{62f70899-1c97-5013-a349-c0a84870ca92}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S2:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S2:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="172" orientation="0" type="embed://panel/right.elmt" uuid="{a11c4497-0f1d-5864-8b30-cdc965cacc12}">
+        <terminals>
+          <terminal id="5" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X2:F" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{56db960e-8abd-50e5-b83e-f4419251b612}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X2:F</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X2:F</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="228" orientation="0" type="embed://panel/left.elmt" uuid="{bd5421bc-bb10-5506-8812-7187c2d601c7}">
+        <terminals>
+          <terminal id="6" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X2:P" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{66a8d129-450f-5a76-9384-0ddc3d89a1b9}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X2:P</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X2:P</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="228" orientation="0" type="embed://panel/right.elmt" uuid="{a8f5a107-93f6-5b4b-be58-bae959766a96}">
+        <terminals>
+          <terminal id="7" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:%IX0.1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{245d10b4-0e80-54c1-9f9f-ff8d704d971f}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:%IX0.1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:%IX0.1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="284" orientation="0" type="embed://panel/left.elmt" uuid="{9aed61fe-bab2-590b-8134-f733dd0a7f8a}">
+        <terminals>
+          <terminal id="8" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S3:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{b0a44508-f01f-508c-a5b7-86bda21b6396}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S3:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S3:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="284" orientation="0" type="embed://panel/right.elmt" uuid="{b883ef57-7ec2-5117-a21c-286d9fa7093a}">
+        <terminals>
+          <terminal id="9" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X3:F" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{35098281-e42b-5752-b63f-67c7bf4376f7}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X3:F</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X3:F</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="340" orientation="0" type="embed://panel/left.elmt" uuid="{6c27a8a2-5efd-513e-b028-d74a5ac618e2}">
+        <terminals>
+          <terminal id="10" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X3:P" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{4b949e90-54e0-5ae6-ad94-a83dee31f6f7}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X3:P</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X3:P</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="340" orientation="0" type="embed://panel/right.elmt" uuid="{cdddfa86-9bf9-52d7-9448-642f972bc705}">
+        <terminals>
+          <terminal id="11" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:%IX0.2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{d3f1f223-1362-5f29-aedc-59fa7dcd0be1}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:%IX0.2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:%IX0.2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="396" orientation="0" type="embed://panel/left.elmt" uuid="{452ab3bd-e59e-5500-a80d-633377b9f04b}">
+        <terminals>
+          <terminal id="12" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S4:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{6ccd1642-f957-5c17-ac87-b17eba366e7c}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S4:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S4:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="396" orientation="0" type="embed://panel/right.elmt" uuid="{462bc0a1-9a19-51f1-b44b-b40ef5a91dc3}">
+        <terminals>
+          <terminal id="13" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X4:F" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{ab79194e-25a4-5e86-99b9-14e5c96ec4d4}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X4:F</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X4:F</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="452" orientation="0" type="embed://panel/left.elmt" uuid="{2d197818-1966-5595-a38d-451bf0aab86d}">
+        <terminals>
+          <terminal id="14" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X4:P" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{bb5edfe1-e4b7-5fa2-859a-048b40773341}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X4:P</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X4:P</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="452" orientation="0" type="embed://panel/right.elmt" uuid="{ebad007b-d560-55db-803c-07da81eee277}">
+        <terminals>
+          <terminal id="15" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:%IX0.3" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{eda7f2dc-92bd-566b-a7ac-73699b4536a3}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:%IX0.3</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:%IX0.3</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="508" orientation="0" type="embed://panel/left.elmt" uuid="{bd395c63-75bf-5059-8779-f2c41a60e009}">
+        <terminals>
+          <terminal id="16" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S5:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{f6aa42ec-52bf-522e-a233-14f23c23177b}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S5:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S5:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="508" orientation="0" type="embed://panel/right.elmt" uuid="{301893aa-c5e6-5e92-b65f-a03fc2f1e26a}">
+        <terminals>
+          <terminal id="17" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X5:F" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{71ec307d-db85-5b71-ae31-5c3f82822330}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X5:F</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X5:F</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="564" orientation="0" type="embed://panel/left.elmt" uuid="{b0360296-341a-5084-b34b-84228eea1a5d}">
+        <terminals>
+          <terminal id="18" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X5:P" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{9dce1e08-66e2-5a9d-9954-de2aaca7d240}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X5:P</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X5:P</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="564" orientation="0" type="embed://panel/right.elmt" uuid="{d42675ff-d41e-51a6-897b-1e226883d9e4}">
+        <terminals>
+          <terminal id="19" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:%IX0.4" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{1f217be7-68f1-546d-9634-494ee81d3d2e}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:%IX0.4</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:%IX0.4</elementInformation>
+        </elementInformations>
+      </element>
+    </elements>
+    <conductors>
+      <conductor terminal1="0" terminal2="1" type="multi" num="100  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="2" terminal2="3" type="multi" num="101  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="4" terminal2="5" type="multi" num="102  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="6" terminal2="7" type="multi" num="103  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="8" terminal2="9" type="multi" num="104  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="10" terminal2="11" type="multi" num="105  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="12" terminal2="13" type="multi" num="106  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="14" terminal2="15" type="multi" num="107  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="16" terminal2="17" type="multi" num="108  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="18" terminal2="19" type="multi" num="109  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+    </conductors>
+  </diagram>
+  <diagram title="filling-line: terminal wiring 2" version="0.90" uuid="{da27e75a-9fdb-59a8-80d8-b907685dd4db}" order="1" cols="14" colsize="60" rows="8" rowsize="80" height="660" displaycols="true" displayrows="true" author="Jack Lai" date="null" folio="%id/%total" filename="">
+    <defaultconductor type="multi" numsize="9" />
+    <elements>
+      <element x="170" y="60" orientation="0" type="embed://panel/left.elmt" uuid="{25561b79-c957-528b-9326-422bd57baf3b}">
+        <terminals>
+          <terminal id="20" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S6:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{e7b4c5b1-e5ca-5642-9c4c-518b85253738}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S6:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S6:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="60" orientation="0" type="embed://panel/right.elmt" uuid="{233604de-e9e4-567d-b2c7-d45260dea078}">
+        <terminals>
+          <terminal id="21" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X6:F" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{a21919c7-c1ab-52ab-9c97-7b6b4b7b7ff3}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X6:F</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X6:F</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="116" orientation="0" type="embed://panel/left.elmt" uuid="{9a733c16-7bdc-511c-8a00-69fe9e4c5883}">
+        <terminals>
+          <terminal id="22" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X6:P" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{feb65ee0-4df6-5ae8-a9d9-1bbe98c308e0}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X6:P</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X6:P</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="116" orientation="0" type="embed://panel/right.elmt" uuid="{bf98b619-6edb-5b50-936c-382de15616d3}">
+        <terminals>
+          <terminal id="23" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:%IX0.5" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{1ce4af74-455a-5ca0-8e08-d5ab0ddcb302}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:%IX0.5</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:%IX0.5</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="172" orientation="0" type="embed://panel/left.elmt" uuid="{90b1bf23-4faf-570a-9f7b-eba5e548662e}">
+        <terminals>
+          <terminal id="24" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S7:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{2c7e9abb-4f42-56f5-a6fb-6eeb6a980172}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S7:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S7:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="172" orientation="0" type="embed://panel/right.elmt" uuid="{0e111930-21a5-57aa-b75b-118b62494e9c}">
+        <terminals>
+          <terminal id="25" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X7:F" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{b06a0a1d-d6e5-5d7e-aada-4d016120b10d}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X7:F</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X7:F</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="228" orientation="0" type="embed://panel/left.elmt" uuid="{95b883b6-f7fe-556e-9271-d33c388753cd}">
+        <terminals>
+          <terminal id="26" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X7:P" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{32b3fb7d-bf50-5f3e-bd60-2567cb52225c}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X7:P</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X7:P</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="228" orientation="0" type="embed://panel/right.elmt" uuid="{649012de-8805-5031-91f8-78fd91944d29}">
+        <terminals>
+          <terminal id="27" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:%IX0.6" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{f0cc8bd6-f0fc-5666-a390-f2a2066c7cb9}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:%IX0.6</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:%IX0.6</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="284" orientation="0" type="embed://panel/left.elmt" uuid="{d67c6a65-3b48-572f-9bb1-b37b24ff8f4f}">
+        <terminals>
+          <terminal id="28" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S8:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{e5836773-79cf-50ed-99e2-84ef47199005}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S8:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S8:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="284" orientation="0" type="embed://panel/right.elmt" uuid="{2203fa6f-5d76-5046-84df-366194bf0419}">
+        <terminals>
+          <terminal id="29" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X8:F" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{f2fa9517-95c1-569f-b131-1c716e04e8f5}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X8:F</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X8:F</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="340" orientation="0" type="embed://panel/left.elmt" uuid="{b7f7899c-1163-5e8b-a17b-478595570dea}">
+        <terminals>
+          <terminal id="30" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X8:P" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{1c20acd4-57f7-592c-915c-3cf7272bc0de}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X8:P</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X8:P</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="340" orientation="0" type="embed://panel/right.elmt" uuid="{5ebcd64b-101a-53ec-90a1-0f59b407ee47}">
+        <terminals>
+          <terminal id="31" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:%IX0.7" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{0fe89b17-ab4b-5ddc-b7d5-f4a1e901f466}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:%IX0.7</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:%IX0.7</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="396" orientation="0" type="embed://panel/left.elmt" uuid="{8523e00d-fcdf-5989-85d8-3a138743eed3}">
+        <terminals>
+          <terminal id="32" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S9:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{e858b203-cd0c-5238-9759-e1da61b957c5}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S9:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S9:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="396" orientation="0" type="embed://panel/right.elmt" uuid="{0bfee500-d302-53f1-a54c-0865c786530f}">
+        <terminals>
+          <terminal id="33" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X9:F" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{bfe7e7de-398d-5f8b-be6c-4078cb760c13}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X9:F</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X9:F</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="452" orientation="0" type="embed://panel/left.elmt" uuid="{8a69b961-399e-5686-bb29-86bc8ca844f1}">
+        <terminals>
+          <terminal id="34" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X9:P" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{5d53118b-d244-53c8-b360-679cd53bf1b3}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X9:P</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X9:P</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="452" orientation="0" type="embed://panel/right.elmt" uuid="{fb99caae-9537-5cd3-ba91-b10bd5a72546}">
+        <terminals>
+          <terminal id="35" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:%IX1.0" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{b63a84ba-b2a5-5f72-a876-74588584a0e0}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:%IX1.0</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:%IX1.0</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="508" orientation="0" type="embed://panel/left.elmt" uuid="{c7b2d205-935d-5b0a-8e7c-eac41d8f2bf5}">
+        <terminals>
+          <terminal id="36" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:%QX0.0" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{c8aeb799-2f61-50a2-9793-93f2dbc1a4cb}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:%QX0.0</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:%QX0.0</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="508" orientation="0" type="embed://panel/right.elmt" uuid="{e684a569-cce8-5204-9c15-1b3584233695}">
+        <terminals>
+          <terminal id="37" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X10:P" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{831f2fe7-60a2-58eb-9b07-3c13cfefaa83}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X10:P</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X10:P</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="564" orientation="0" type="embed://panel/left.elmt" uuid="{58d654f4-e227-50c9-8259-acac2b98ed6a}">
+        <terminals>
+          <terminal id="38" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X10:F" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{9100988e-bfa8-5ec9-ae2b-8c03f54d0ebd}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X10:F</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X10:F</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="564" orientation="0" type="embed://panel/right.elmt" uuid="{e3fa19bc-c9e2-5448-ba0c-682be095cdd4}">
+        <terminals>
+          <terminal id="39" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="H10:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{411fd437-f3f1-586d-b9b4-7ae575fe8bfd}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>H10:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">H10:1</elementInformation>
+        </elementInformations>
+      </element>
+    </elements>
+    <conductors>
+      <conductor terminal1="20" terminal2="21" type="multi" num="110  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="22" terminal2="23" type="multi" num="111  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="24" terminal2="25" type="multi" num="112  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="26" terminal2="27" type="multi" num="113  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="28" terminal2="29" type="multi" num="114  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="30" terminal2="31" type="multi" num="115  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="32" terminal2="33" type="multi" num="116  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="34" terminal2="35" type="multi" num="117  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="36" terminal2="37" type="multi" num="118  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="38" terminal2="39" type="multi" num="119  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+    </conductors>
+  </diagram>
+  <diagram title="filling-line: terminal wiring 3" version="0.90" uuid="{05813068-d55e-5663-91d6-fac5dd103618}" order="2" cols="14" colsize="60" rows="8" rowsize="80" height="660" displaycols="true" displayrows="true" author="Jack Lai" date="null" folio="%id/%total" filename="">
+    <defaultconductor type="multi" numsize="9" />
+    <elements>
+      <element x="170" y="60" orientation="0" type="embed://panel/left.elmt" uuid="{ddff77cb-bf4e-526e-a816-8622c6009d5d}">
+        <terminals>
+          <terminal id="40" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:%QX0.1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{d24f6277-f5e9-5967-a22d-148c443b83da}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:%QX0.1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:%QX0.1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="60" orientation="0" type="embed://panel/right.elmt" uuid="{0369ad78-6087-5867-a393-a72578f21089}">
+        <terminals>
+          <terminal id="41" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X11:P" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{30103979-678a-53df-926e-94c86b1ed3bd}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X11:P</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X11:P</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="116" orientation="0" type="embed://panel/left.elmt" uuid="{a7f1e57c-f271-50b3-bb94-5393136563a4}">
+        <terminals>
+          <terminal id="42" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X11:F" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{fda1546e-a207-5fe4-aca5-25db10d6ba2e}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X11:F</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X11:F</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="116" orientation="0" type="embed://panel/right.elmt" uuid="{ded8aa47-7dab-5892-8665-7bd35e02fca7}">
+        <terminals>
+          <terminal id="43" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="K1:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{fb555050-f3d9-561b-9205-c291286430f7}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>K1:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">K1:1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="172" orientation="0" type="embed://panel/left.elmt" uuid="{663f3ead-032d-5102-8577-dac305c61960}">
+        <terminals>
+          <terminal id="44" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:%QX0.2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{ea32bac4-88ca-5a5a-b339-dd8ef6583f63}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:%QX0.2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:%QX0.2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="172" orientation="0" type="embed://panel/right.elmt" uuid="{44f2ae3d-83b8-5e8f-87eb-73b4dc3ace68}">
+        <terminals>
+          <terminal id="45" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X12:P" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{453b340f-03ca-51af-88ad-e2ab25bd2772}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X12:P</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X12:P</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="228" orientation="0" type="embed://panel/left.elmt" uuid="{9e3c94e2-55a7-535d-af80-42fc48fe6f6c}">
+        <terminals>
+          <terminal id="46" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X12:F" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{e85fcc2b-165e-5c73-97f6-1635dce2dfea}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X12:F</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X12:F</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="228" orientation="0" type="embed://panel/right.elmt" uuid="{e693efb9-28c9-51f6-bed8-faca77a0821b}">
+        <terminals>
+          <terminal id="47" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="Y1:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{50ab3aca-c1d6-5862-853e-95d310f5abf0}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>Y1:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">Y1:1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="284" orientation="0" type="embed://panel/left.elmt" uuid="{625b445e-4f46-5859-94b7-90bae33831f1}">
+        <terminals>
+          <terminal id="48" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:%QX0.3" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{a91d8686-1f0b-5242-bcb5-138597f34a65}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:%QX0.3</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:%QX0.3</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="284" orientation="0" type="embed://panel/right.elmt" uuid="{6c8e3d2f-9856-5c7a-afbe-1cfff8567ceb}">
+        <terminals>
+          <terminal id="49" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X13:P" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{f51d6415-7b48-5268-b99d-64e42dfd291a}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X13:P</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X13:P</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="340" orientation="0" type="embed://panel/left.elmt" uuid="{6920cbc0-3cc2-5643-9629-db9a73bf3280}">
+        <terminals>
+          <terminal id="50" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X13:F" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{867f661f-b793-580d-8fd4-14c7f36cbfe0}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X13:F</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X13:F</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="340" orientation="0" type="embed://panel/right.elmt" uuid="{5036cdd3-58a6-52a2-9950-37d5ed4836ab}">
+        <terminals>
+          <terminal id="51" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="H13:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{1a69963f-6678-5de9-a2d5-90eee40b8024}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>H13:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">H13:1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="396" orientation="0" type="embed://panel/left.elmt" uuid="{96908d71-86c1-5191-aa4b-4e2fee097913}">
+        <terminals>
+          <terminal id="52" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:%QX0.4" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{454b2667-bd6f-548d-b5d4-711853d23c16}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:%QX0.4</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:%QX0.4</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="396" orientation="0" type="embed://panel/right.elmt" uuid="{7da7383a-dde5-5f49-a898-ec14fa4c62c0}">
+        <terminals>
+          <terminal id="53" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X14:P" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{06ec34ae-b92a-5871-b7fa-c6d99918be8f}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X14:P</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X14:P</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="452" orientation="0" type="embed://panel/left.elmt" uuid="{d9d5f23a-8769-5435-85fa-4b66abc7c543}">
+        <terminals>
+          <terminal id="54" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X14:F" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{5d8412fd-d10d-5991-9f39-7b278c2bbf47}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X14:F</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X14:F</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="452" orientation="0" type="embed://panel/right.elmt" uuid="{6712ae6d-f375-549e-885f-3b9de07828f0}">
+        <terminals>
+          <terminal id="55" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="H14:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{1c4a60f1-264a-5dd8-88f9-3a4ffb9ae04d}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>H14:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">H14:1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="508" orientation="0" type="embed://panel/left.elmt" uuid="{543023f4-3ff1-5cec-9ddd-ed447e931f64}">
+        <terminals>
+          <terminal id="56" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:%QX0.5" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{127bdf54-13bd-5b76-a45e-5715a405e8ca}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:%QX0.5</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:%QX0.5</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="508" orientation="0" type="embed://panel/right.elmt" uuid="{33ce7da6-6daf-508c-9f93-3d2d5c875d33}">
+        <terminals>
+          <terminal id="57" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X15:P" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{140d0089-2991-5e8e-94bd-d5a594668243}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X15:P</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X15:P</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="564" orientation="0" type="embed://panel/left.elmt" uuid="{1e34216f-2ee0-59dd-8b92-458b6e9c391f}">
+        <terminals>
+          <terminal id="58" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="X15:F" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{2e95558e-a2e0-5e29-bef5-b6e76133476f}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>X15:F</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">X15:F</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="564" orientation="0" type="embed://panel/right.elmt" uuid="{11a509e9-35d8-580f-b9d2-fa093cceb38f}">
+        <terminals>
+          <terminal id="59" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="H15:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{3cb76fe3-a008-5729-abf0-410d6a76de26}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>H15:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">H15:1</elementInformation>
+        </elementInformations>
+      </element>
+    </elements>
+    <conductors>
+      <conductor terminal1="40" terminal2="41" type="multi" num="120  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="42" terminal2="43" type="multi" num="121  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="44" terminal2="45" type="multi" num="122  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="46" terminal2="47" type="multi" num="123  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="48" terminal2="49" type="multi" num="124  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="50" terminal2="51" type="multi" num="125  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="52" terminal2="53" type="multi" num="126  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="54" terminal2="55" type="multi" num="127  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="56" terminal2="57" type="multi" num="128  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="58" terminal2="59" type="multi" num="129  18 AWG blue" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="blue" condsize="1" text_color="#000000" color="#000000" />
+    </conductors>
+  </diagram>
+  <diagram title="filling-line: terminal wiring 4" version="0.90" uuid="{d38d25ca-271e-57ee-8e05-f657c71cc9f9}" order="3" cols="14" colsize="60" rows="8" rowsize="80" height="660" displaycols="true" displayrows="true" author="Jack Lai" date="null" folio="%id/%total" filename="">
+    <defaultconductor type="multi" numsize="9" />
+    <elements>
+      <element x="170" y="60" orientation="0" type="embed://panel/left.elmt" uuid="{eafc34d9-c841-5319-b0a7-7c7b699b9b25}">
+        <terminals>
+          <terminal id="60" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="J0:+" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{a7906a92-e2da-519e-9201-512b979f9a83}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>J0:+</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">J0:+</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="60" orientation="0" type="embed://panel/right.elmt" uuid="{b146a401-3289-50a1-9ebb-0d8971cdc5be}">
+        <terminals>
+          <terminal id="61" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="F1:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{15431228-25a2-5ad5-a2d5-a4b5da47199d}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>F1:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">F1:1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="116" orientation="0" type="embed://panel/left.elmt" uuid="{86145450-bb7e-576e-8eb3-c66e842f0f26}">
+        <terminals>
+          <terminal id="62" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="F1:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{e2da5eb1-370f-5eaf-a1e8-31f13fe7fa40}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>F1:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">F1:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="116" orientation="0" type="embed://panel/right.elmt" uuid="{27e0c594-d724-5815-964e-e7f61ac9105c}">
+        <terminals>
+          <terminal id="63" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D24:IN" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{87e551da-0ffe-512e-9df8-457bc1cd1889}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D24:IN</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D24:IN</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="172" orientation="0" type="embed://panel/left.elmt" uuid="{1ab93128-ccfc-5248-82dd-076c074d3153}">
+        <terminals>
+          <terminal id="64" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="J0:-" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{b5d19f02-275a-58b1-8915-7b438dea1161}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>J0:-</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">J0:-</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="172" orientation="0" type="embed://panel/right.elmt" uuid="{83781791-5eac-59ab-8ffc-d1194b67f0c9}">
+        <terminals>
+          <terminal id="65" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D0:IN" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{eae3f23f-d65a-5576-a78a-52ecea113e1e}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D0:IN</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D0:IN</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="228" orientation="0" type="embed://panel/left.elmt" uuid="{9c1a9dbb-bf74-5553-8a2b-cc43c2acfaa1}">
+        <terminals>
+          <terminal id="66" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D24:10" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{f00a5c25-172f-59dc-9cb6-9cd44fa066b1}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D24:10</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D24:10</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="228" orientation="0" type="embed://panel/right.elmt" uuid="{17fe2868-a420-5a43-8256-a5d37251d6f3}">
+        <terminals>
+          <terminal id="67" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:+24" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{c5a1673b-b986-5c76-9a36-74035e606347}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:+24</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:+24</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="284" orientation="0" type="embed://panel/left.elmt" uuid="{6e450511-77d0-55a3-adba-36c53f325d38}">
+        <terminals>
+          <terminal id="68" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D0:7" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{97a5d7d0-01cb-5160-a13a-af8b588220ab}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D0:7</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D0:7</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="284" orientation="0" type="embed://panel/right.elmt" uuid="{d75ea857-27f3-51f7-9790-a1fbd8c922f9}">
+        <terminals>
+          <terminal id="69" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="PLC1:0V" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{5485f12e-8e0c-5ff3-bd3c-08ebfc34f92a}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>PLC1:0V</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">PLC1:0V</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="340" orientation="0" type="embed://panel/left.elmt" uuid="{a2546b89-1490-509d-9422-242d3085210d}">
+        <terminals>
+          <terminal id="70" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D24:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{eaab5d62-0fa4-5980-8462-7f6047b422f0}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D24:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D24:1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="340" orientation="0" type="embed://panel/right.elmt" uuid="{cb8238cb-21b7-52f9-ae31-a5304a2ff9da}">
+        <terminals>
+          <terminal id="71" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S1:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{4308f75e-9424-5721-a28c-d24bb21021cb}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S1:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S1:1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="396" orientation="0" type="embed://panel/left.elmt" uuid="{ef87e2e5-b147-515f-9888-04ef0cfe9aeb}">
+        <terminals>
+          <terminal id="72" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D24:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{0e55770a-cabc-55cc-9bf1-ab43d6b21fb7}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D24:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D24:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="396" orientation="0" type="embed://panel/right.elmt" uuid="{f190c224-7cba-59fa-bfd5-db79b2110d2a}">
+        <terminals>
+          <terminal id="73" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S2:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{018be38b-7439-5978-8c3e-8b1a3051e332}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S2:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S2:1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="452" orientation="0" type="embed://panel/left.elmt" uuid="{4b5dfa2a-ebc2-53ff-9d30-b30478dcb586}">
+        <terminals>
+          <terminal id="74" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D24:3" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{27e600d7-d2f5-543d-985c-37b310250981}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D24:3</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D24:3</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="452" orientation="0" type="embed://panel/right.elmt" uuid="{26cadb09-7c4c-56a5-8bcf-d90320e919f9}">
+        <terminals>
+          <terminal id="75" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S3:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{64772a83-9b6a-5cce-9bf5-9b270181eb5c}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S3:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S3:1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="508" orientation="0" type="embed://panel/left.elmt" uuid="{d3a73e17-75ec-5747-817e-e985af86cc4a}">
+        <terminals>
+          <terminal id="76" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D24:4" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{49ee1d32-ca30-5859-9bf2-0f99251ffd13}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D24:4</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D24:4</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="508" orientation="0" type="embed://panel/right.elmt" uuid="{6bb48dc3-5a2e-50b9-b7cd-cf320dc75bc6}">
+        <terminals>
+          <terminal id="77" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S4:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{8a7060ec-0cab-52bd-bb4a-a86cd5e4667e}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S4:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S4:1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="564" orientation="0" type="embed://panel/left.elmt" uuid="{c065db23-edc4-5fa3-a1a3-740993ee6ad5}">
+        <terminals>
+          <terminal id="78" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D24:5" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{11b44a05-8783-5513-b920-1b5cbd8c87e0}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D24:5</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D24:5</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="564" orientation="0" type="embed://panel/right.elmt" uuid="{f1c3e3d8-7bbf-55c9-9a08-4d315b2752e9}">
+        <terminals>
+          <terminal id="79" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S5:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{d5942d7d-cffa-5691-bae5-c807bc6fe8cb}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S5:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S5:1</elementInformation>
+        </elementInformations>
+      </element>
+    </elements>
+    <conductors>
+      <conductor terminal1="60" terminal2="61" type="multi" num="130  18 AWG red" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="red" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="62" terminal2="63" type="multi" num="131  18 AWG red" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="red" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="64" terminal2="65" type="multi" num="132  18 AWG black" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="black" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="66" terminal2="67" type="multi" num="133  18 AWG red" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="red" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="68" terminal2="69" type="multi" num="134  18 AWG black" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="black" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="70" terminal2="71" type="multi" num="135  18 AWG red" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="red" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="72" terminal2="73" type="multi" num="136  18 AWG red" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="red" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="74" terminal2="75" type="multi" num="137  18 AWG red" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="red" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="76" terminal2="77" type="multi" num="138  18 AWG red" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="red" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="78" terminal2="79" type="multi" num="139  18 AWG red" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="red" condsize="1" text_color="#000000" color="#000000" />
+    </conductors>
+  </diagram>
+  <diagram title="filling-line: terminal wiring 5" version="0.90" uuid="{748ca0a2-5950-5305-a807-fc1efd52a7f3}" order="4" cols="14" colsize="60" rows="8" rowsize="80" height="660" displaycols="true" displayrows="true" author="Jack Lai" date="null" folio="%id/%total" filename="">
+    <defaultconductor type="multi" numsize="9" />
+    <elements>
+      <element x="170" y="60" orientation="0" type="embed://panel/left.elmt" uuid="{44e6ea79-88a0-59a4-9eed-50b607481991}">
+        <terminals>
+          <terminal id="80" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D24:6" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{c0bd92bb-ea29-52dc-93c8-c809ffd57af9}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D24:6</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D24:6</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="60" orientation="0" type="embed://panel/right.elmt" uuid="{be8fc4bb-d86a-55df-9e53-e754d4102f36}">
+        <terminals>
+          <terminal id="81" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S6:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{62e31c97-1fc3-5657-b9f8-4f04cd957035}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S6:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S6:1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="116" orientation="0" type="embed://panel/left.elmt" uuid="{222a9e23-0bc3-5861-a09d-1a7ccd5a65eb}">
+        <terminals>
+          <terminal id="82" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D24:7" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{c3db7460-7f8d-56ee-b0c4-91649ac382b4}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D24:7</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D24:7</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="116" orientation="0" type="embed://panel/right.elmt" uuid="{6c1a00e0-c2d0-5302-8d1e-efad4ee3acbe}">
+        <terminals>
+          <terminal id="83" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S7:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{1d9b1d61-5949-5937-af82-07229723d94f}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S7:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S7:1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="172" orientation="0" type="embed://panel/left.elmt" uuid="{2ac05628-ab1e-5d68-b7d7-76bad1feecf5}">
+        <terminals>
+          <terminal id="84" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D24:8" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{11da49ff-4bf3-55c8-b5a5-91d4040aa40b}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D24:8</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D24:8</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="172" orientation="0" type="embed://panel/right.elmt" uuid="{fdfd493e-42a4-537b-8a28-27847933f751}">
+        <terminals>
+          <terminal id="85" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S8:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{daa4930f-e327-52f3-8c1f-4f32c695b3a9}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S8:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S8:1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="228" orientation="0" type="embed://panel/left.elmt" uuid="{b0d3c3db-d415-56d2-98fe-105009835de8}">
+        <terminals>
+          <terminal id="86" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D24:9" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{2c148a29-aea4-5b08-8c93-421a88239a57}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D24:9</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D24:9</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="228" orientation="0" type="embed://panel/right.elmt" uuid="{32b902fc-527e-596d-a24f-1a6272156660}">
+        <terminals>
+          <terminal id="87" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="S9:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{36572692-a989-52ef-ab5a-e5cef97aa7cc}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>S9:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">S9:1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="284" orientation="0" type="embed://panel/left.elmt" uuid="{50650854-0c92-5d2e-906d-2d0f5a9ada9f}">
+        <terminals>
+          <terminal id="88" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="H10:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{dc842acd-5a0d-59c4-87e5-cfe025e13f11}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>H10:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">H10:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="284" orientation="0" type="embed://panel/right.elmt" uuid="{316ebcfe-fa04-5042-a72c-bce2c0940ae1}">
+        <terminals>
+          <terminal id="89" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D0:1" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{c98f4a91-f8c9-533e-bcb6-7f1e6ac205fd}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D0:1</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D0:1</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="340" orientation="0" type="embed://panel/left.elmt" uuid="{23ce60b0-fbd8-578c-a397-0692d981ec40}">
+        <terminals>
+          <terminal id="90" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="K1:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{37468d87-282b-5e3c-a786-312e292271c2}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>K1:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">K1:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="340" orientation="0" type="embed://panel/right.elmt" uuid="{ae798dc2-d4d6-5e8e-9a75-668e82d6b2bd}">
+        <terminals>
+          <terminal id="91" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D0:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{80fa764c-e245-5d8c-b2d7-9aa8c7808fe6}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D0:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D0:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="396" orientation="0" type="embed://panel/left.elmt" uuid="{0223184b-2230-545e-b793-9c081782061c}">
+        <terminals>
+          <terminal id="92" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="Y1:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{fc35058d-6eb6-50fa-ac4c-5b8504823ee2}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>Y1:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">Y1:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="396" orientation="0" type="embed://panel/right.elmt" uuid="{2daa43b3-cab5-5090-9d9e-ff1f97fd4f1b}">
+        <terminals>
+          <terminal id="93" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D0:3" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{8ab1d5df-5515-569e-b828-fcc8e171bba5}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D0:3</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D0:3</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="452" orientation="0" type="embed://panel/left.elmt" uuid="{1cf10791-a125-54ed-83b4-825c38cc108a}">
+        <terminals>
+          <terminal id="94" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="H13:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{83b950b5-ab06-57e3-9ee9-2f7767b80123}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>H13:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">H13:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="452" orientation="0" type="embed://panel/right.elmt" uuid="{38dfb865-089a-5c42-aaa9-04707cc25640}">
+        <terminals>
+          <terminal id="95" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D0:4" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{d8b189bd-8d67-50fe-9762-00fee076b2eb}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D0:4</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D0:4</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="508" orientation="0" type="embed://panel/left.elmt" uuid="{d52685f9-1c27-5ce4-8201-d9824c5108b7}">
+        <terminals>
+          <terminal id="96" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="H14:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{bd107775-3628-5ddc-a3e3-4ce1d4127867}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>H14:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">H14:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="508" orientation="0" type="embed://panel/right.elmt" uuid="{a16a3b82-d3b2-56ca-a685-4131f4fc31ef}">
+        <terminals>
+          <terminal id="97" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D0:5" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{eab72aa6-277a-5967-bde4-ec46f15a87f6}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D0:5</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D0:5</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="170" y="564" orientation="0" type="embed://panel/left.elmt" uuid="{7fcff2d7-b57b-5b11-a773-cec2d029bc56}">
+        <terminals>
+          <terminal id="98" x="80" y="0" orientation="1" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="H15:2" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{c6bf3cbc-de01-5212-be19-b97849076058}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>H15:2</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">H15:2</elementInformation>
+        </elementInformations>
+      </element>
+      <element x="650" y="564" orientation="0" type="embed://panel/right.elmt" uuid="{2d1d14eb-1f62-5f2d-abd6-b53071137623}">
+        <terminals>
+          <terminal id="99" x="-80" y="0" orientation="3" />
+        </terminals>
+        <inputs>
+          <input x="-74" y="4" text="D0:6" />
+        </inputs>
+        <dynamic_texts>
+          <dynamic_elmt_text x="-74" y="-8" text_from="UserText" text_width="-1" rotation="0" font="Arial,8,-1,5,50,0,0,0,0,0" uuid="{577fce00-b9f2-53d7-b754-a90b7a053b96}" Halignment="AlignLeft" Valignment="AlignTop" frame="false">
+            <text>D0:6</text>
+          </dynamic_elmt_text>
+        </dynamic_texts>
+        <elementInformations>
+          <elementInformation name="label" show="1">D0:6</elementInformation>
+        </elementInformations>
+      </element>
+    </elements>
+    <conductors>
+      <conductor terminal1="80" terminal2="81" type="multi" num="140  18 AWG red" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="red" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="82" terminal2="83" type="multi" num="141  18 AWG red" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="red" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="84" terminal2="85" type="multi" num="142  18 AWG red" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="red" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="86" terminal2="87" type="multi" num="143  18 AWG red" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="red" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="88" terminal2="89" type="multi" num="144  18 AWG black" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="black" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="90" terminal2="91" type="multi" num="145  18 AWG black" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="black" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="92" terminal2="93" type="multi" num="146  18 AWG black" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="black" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="94" terminal2="95" type="multi" num="147  18 AWG black" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="black" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="96" terminal2="97" type="multi" num="148  18 AWG black" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="black" condsize="1" text_color="#000000" color="#000000" />
+      <conductor terminal1="98" terminal2="99" type="multi" num="149  18 AWG black" numsize="8" displaytext="1" horizrotatetext="0" vertirotatetext="270" conductor_section="18 AWG" conductor_color="black" condsize="1" text_color="#000000" color="#000000" />
+    </conductors>
+  </diagram>
+  <collection>
+    <category name="panel">
+      <names>
+        <name lang="en">Panel pin views</name>
+      </names>
+      <element name="left.elmt">
+        <definition type="element" version="0.3" width="160" height="40" hotspot_x="80" hotspot_y="20" orientation="dyyy">
+          <names>
+            <name lang="en">Left device pin</name>
+          </names>
+          <informations>Jack Lai; MIT; connection-list pin view</informations>
+          <description>
+            <rect x="-80" y="-20" width="160" height="40" style="line-style:normal;line-weight:normal;filling:none;color:black" />
+            <input x="-74" y="4" size="8" text="_" tagg="label" />
+            <terminal x="80" y="0" orientation="e" />
+          </description>
+        </definition>
+      </element>
+      <element name="right.elmt">
+        <definition type="element" version="0.3" width="160" height="40" hotspot_x="80" hotspot_y="20" orientation="dyyy">
+          <names>
+            <name lang="en">Right device pin</name>
+          </names>
+          <informations>Jack Lai; MIT; connection-list pin view</informations>
+          <description>
+            <rect x="-80" y="-20" width="160" height="40" style="line-style:normal;line-weight:normal;filling:none;color:black" />
+            <input x="-74" y="4" size="8" text="_" tagg="label" />
+            <terminal x="-80" y="0" orientation="w" />
+          </description>
+        </definition>
+      </element>
+    </category>
+  </collection>
+</project>

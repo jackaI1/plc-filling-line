@@ -1,0 +1,14 @@
+item,description,quantity,unit
+CONTACT-24,24 V simulated dry contact,9,each
+DIST-0,Internally common 0 V distribution,1,each
+DIST-24,Internally common +24 V distribution,1,each
+FUSE-1A,1 A control fuse,1,each
+INLET-24,24 V DC supply inlet,1,each
+LED-24,24 V panel indicator,4,each
+PLC-24,Simulated 24 V PLC with 9 inputs and 6 outputs,1,each
+RELAY-24,24 V conveyor contactor coil,1,each
+TB-2,Two-sided feedthrough terminal,15,each
+VALVE-24,24 V filling-valve solenoid,1,each
+WIRE:18 AWG:black,18 AWG black hookup wire,4.35,m
+WIRE:18 AWG:blue,18 AWG blue hookup wire,12.0,m
+WIRE:18 AWG:red,18 AWG red hookup wire,6.40,m

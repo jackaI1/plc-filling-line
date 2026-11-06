@@ -1,8 +1,8 @@
 [project]
 name = "plc-filling-line"
 version = "0.1.0"
-description = "Compiled IEC 61131-3 ladder logic, simulated filling line and maintenance HMI"
-requires-python = ">=3.9"
+description = "Compiled filling-line simulation, panel drawings and Modbus-connected operator HMI"
+requires-python = ">=3.10"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -1,2 +1,5 @@
 lxml==6.0.2
 playwright==1.56.0
+openpyxl==3.1.5
+ezdxf==1.4.3
+reportlab==4.4.9

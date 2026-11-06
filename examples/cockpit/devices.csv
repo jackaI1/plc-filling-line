@@ -1,0 +1,8 @@
+device,part,description,capacity,mount,x_mm,y_mm,width_mm,height_mm,function
+S1,SW-TOGGLE,24 V toggle switch,2,panel,70,100,45,40,MASTER
+S2,SW-TOGGLE,24 V toggle switch,2,panel,190,100,45,40,PUMP
+S3,SW-TOGGLE,24 V toggle switch,2,panel,310,100,45,40,LIGHTS
+H1,LED-24,24 V panel indicator,2,panel,70,220,45,40,MASTER
+H2,LED-24,24 V panel indicator,2,panel,190,220,45,40,PUMP
+H3,LED-24,24 V panel indicator,2,panel,310,220,45,40,LIGHTS
+J1,J-6,Six-pin panel connector,6,panel,190,310,45,40,HARNESS

@@ -1,0 +1,24 @@
+tag,protocol_offset,fuxa_address,access,source
+Start,0,1,read only,plc/line.xml Start
+Stop,1,2,read only,plc/line.xml Stop
+Reset,2,3,read only,plc/line.xml Reset
+EStopOK,3,4,read only,plc/line.xml EStopOK
+GuardClosed,4,5,read only,plc/line.xml GuardClosed
+TankOK,5,6,read only,plc/line.xml TankOK
+BottleAtFill,6,7,read only,plc/line.xml BottleAtFill
+ExitSensor,7,8,read only,plc/line.xml ExitSensor
+JamSwitch,8,9,read only,plc/line.xml JamSwitch
+Run,9,10,read only,plc/line.xml Run
+Conveyor,10,11,read only,plc/line.xml Conveyor
+Valve,11,12,read only,plc/line.xml Valve
+Alarm,12,13,read only,plc/line.xml Alarm
+BatchDone,13,14,read only,plc/line.xml BatchDone
+Filled,14,15,read only,plc/line.xml Filled
+FillBlocked,15,16,read only,plc/line.xml FillBlocked
+BatchCount,16,17,read only,BatchCount.CV
+BottlePosition,17,18,read only,simulated plant
+BottleLevel,18,19,read only,simulated plant
+StartCommand,100,101,write command,operator button -> Bench command
+StopCommand,101,102,write command,operator button -> Bench command
+ResetCommand,102,103,write command,operator button -> Bench command
+HoldFillSensor,103,104,write command,simulated plant

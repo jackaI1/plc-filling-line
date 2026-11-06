@@ -1,0 +1,326 @@
+{
+  "name": "Filling line operator",
+  "version": "1.02",
+  "devices": {
+    "line": {
+      "id": "line",
+      "name": "FillingLine",
+      "type": "ModbusTCP",
+      "enabled": true,
+      "polling": 100,
+      "property": {
+        "address": "127.0.0.1:1502",
+        "slaveid": 1,
+        "timeout": 1000,
+        "delay": 0
+      },
+      "tags": {
+        "Start": {
+          "id": "Start",
+          "name": "Start",
+          "type": "UInt16",
+          "address": "1",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "Stop": {
+          "id": "Stop",
+          "name": "Stop",
+          "type": "UInt16",
+          "address": "2",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "Reset": {
+          "id": "Reset",
+          "name": "Reset",
+          "type": "UInt16",
+          "address": "3",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "EStopOK": {
+          "id": "EStopOK",
+          "name": "EStopOK",
+          "type": "UInt16",
+          "address": "4",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "GuardClosed": {
+          "id": "GuardClosed",
+          "name": "GuardClosed",
+          "type": "UInt16",
+          "address": "5",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "TankOK": {
+          "id": "TankOK",
+          "name": "TankOK",
+          "type": "UInt16",
+          "address": "6",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "BottleAtFill": {
+          "id": "BottleAtFill",
+          "name": "BottleAtFill",
+          "type": "UInt16",
+          "address": "7",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "ExitSensor": {
+          "id": "ExitSensor",
+          "name": "ExitSensor",
+          "type": "UInt16",
+          "address": "8",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "JamSwitch": {
+          "id": "JamSwitch",
+          "name": "JamSwitch",
+          "type": "UInt16",
+          "address": "9",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "Run": {
+          "id": "Run",
+          "name": "Run",
+          "type": "UInt16",
+          "address": "10",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "Conveyor": {
+          "id": "Conveyor",
+          "name": "Conveyor",
+          "type": "UInt16",
+          "address": "11",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "Valve": {
+          "id": "Valve",
+          "name": "Valve",
+          "type": "UInt16",
+          "address": "12",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "Alarm": {
+          "id": "Alarm",
+          "name": "Alarm",
+          "type": "UInt16",
+          "address": "13",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "BatchDone": {
+          "id": "BatchDone",
+          "name": "BatchDone",
+          "type": "UInt16",
+          "address": "14",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "Filled": {
+          "id": "Filled",
+          "name": "Filled",
+          "type": "UInt16",
+          "address": "15",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "FillBlocked": {
+          "id": "FillBlocked",
+          "name": "FillBlocked",
+          "type": "UInt16",
+          "address": "16",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "BatchCount": {
+          "id": "BatchCount",
+          "name": "BatchCount",
+          "type": "UInt16",
+          "address": "17",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": true,
+            "interval": 1
+          }
+        },
+        "BottlePosition": {
+          "id": "BottlePosition",
+          "name": "BottlePosition",
+          "type": "UInt16",
+          "address": "18",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "BottleLevel": {
+          "id": "BottleLevel",
+          "name": "BottleLevel",
+          "type": "UInt16",
+          "address": "19",
+          "memaddress": 400000,
+          "daq": {
+            "enabled": false,
+            "interval": 1
+          }
+        },
+        "StartCommand": {
+          "id": "StartCommand",
+          "name": "StartCommand",
+          "type": "UInt16",
+          "address": "101",
+          "memaddress": 400000
+        },
+        "StopCommand": {
+          "id": "StopCommand",
+          "name": "StopCommand",
+          "type": "UInt16",
+          "address": "102",
+          "memaddress": 400000
+        },
+        "ResetCommand": {
+          "id": "ResetCommand",
+          "name": "ResetCommand",
+          "type": "UInt16",
+          "address": "103",
+          "memaddress": 400000
+        },
+        "HoldFillSensor": {
+          "id": "HoldFillSensor",
+          "name": "HoldFillSensor",
+          "type": "UInt16",
+          "address": "104",
+          "memaddress": 400000
+        }
+      }
+    }
+  },
+  "server": {
+    "id": "0",
+    "name": "FUXA Server",
+    "type": "FuxaServer",
+    "property": {}
+  },
+  "alarms": [
+    {
+      "name": "FillBlocked",
+      "property": {
+        "variable": "FillBlocked",
+        "variableId": "FillBlocked",
+        "variableSrc": "line"
+      },
+      "high": {
+        "enabled": true,
+        "min": 1,
+        "max": 1,
+        "checkdelay": 0.1,
+        "timedelay": 0,
+        "ackmode": "ackactive",
+        "text": "Fill position did not clear. Release the held sensor, then reset.",
+        "group": "Filling station",
+        "color": "#ffffff",
+        "bkcolor": "#a52222"
+      }
+    }
+  ],
+  "hmi": {
+    "views": [
+      {
+        "id": "line-overview",
+        "name": "Line overview",
+        "profile": {
+          "width": 1200,
+          "height": 900,
+          "bkcolor": "#edf1f4"
+        },
+        "items": {
+          "OXC_panel": {
+            "id": "OXC_panel",
+            "type": "svg-ext-own_ctrl-iframe",
+            "name": "Filling line operator",
+            "property": {
+              "address": "http://127.0.0.1:1881/resources/operator/index.html"
+            },
+            "label": "HtmlIframe"
+          }
+        },
+        "variables": {},
+        "svgcontent": "<svg width=\"1200\" height=\"900\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:html=\"http://www.w3.org/1999/xhtml\"><g id=\"OXC_panel\"><foreignObject x=\"0\" y=\"0\" width=\"1200\" height=\"900\"><html:div id=\"D-OXC_panel\" style=\"width:1200px;height:900px\"/></foreignObject></g></svg>",
+        "type": "svg"
+      }
+    ],
+    "layout": {
+      "start": "line-overview",
+      "autoresize": true,
+      "navigation": {
+        "mode": "void",
+        "type": "block",
+        "items": []
+      },
+      "header": {},
+      "showdev": false,
+      "hidenavigation": true
+    }
+  },
+  "charts": []
+}
