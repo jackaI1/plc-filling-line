@@ -220,6 +220,44 @@ See [the ladder diagram](docs/ladder.svg) and
 [control and build notes](docs/control-notes.md) for the input/output map,
 scan order, toolchain and instructions for changing the ladder.
 
+## Stop the line even if the controller gets it wrong
+
+I added a separate safety layer because a stop button should not depend on the
+same program that runs the line. In a real machine the emergency stop and the
+guard switch cut the drive power directly, so a bug in the normal control logic
+cannot keep a motor running.
+
+My emergency stop and guard each have two switch contacts, called channel A and
+channel B. A healthy channel reads "true". If either channel of either function
+reads unhealthy, the conveyor and valve lose power in that same 50 millisecond
+step, whatever the controller decides. The controller still sees the stop and
+raises its own alarm, so the maintenance log records the cause.
+
+After a stop, the line stays off until I press **Reset** once with everything
+healthy. Holding the button down does not count. If the two channels of one
+function disagree for more than two steps, the layer records a channel fault. That
+catches a switch that is stuck on the wrong reading before I rely on it.
+
+To see the rules in action, run this from the project folder with the Python
+environment active:
+
+```sh
+python -m fillingline.safety_check
+```
+
+It starts a batch and injects one fault at a time: a stuck emergency-stop
+channel, a stuck guard channel, a reset button welded shut and a controller
+output stuck on. Each case must cut the drive power in the trip step, refuse a
+reset while the fault remains, and complete a five-bottle batch after I repair it.
+The table it prints is copied into the [safety specification](docs/safety-function.md).
+
+The specification explains the design in full. It also estimates the performance
+level under ISO 13849-1, the standard that rates how much risk a safety stop
+must reduce. My estimate is performance level d, using category 3 and medium
+diagnostic coverage. The assumptions are listed in the document, and
+`python tools/safety_pl.py` prints the calculation. This is a training estimate
+for a simulation, not a certified safety system.
+
 ## Run the checks
 
 After setup, run:
@@ -231,10 +269,12 @@ python -m unittest discover -s tests -v
 
 Continuous integration (CI), the automated checks GitHub runs for changes,
 rebuilds the controller and checks that its exported code matches the ladder.
-The 57 tests exercise timed filling, counting, fault recovery, 2,000 randomized
+The 72 tests exercise timed filling, counting, fault recovery, 2,000 randomized
 input steps, saved maintenance records and the terminal walkthrough. They check
 the fill-clearance timeout just before and exactly at its one-second limit,
 same-scan output shutdown, and reset with a sensor held on.
+The safety tests inject single faults into the emergency stop and guard and check that
+the drives stop in the same step and recover only after a monitored reset.
 
 The wiring checks cover duplicate terminals, unconnected pins, connector
 occupancy, all 15 drawing addresses, exact BOM totals, literal spreadsheet text,
@@ -247,8 +287,10 @@ pages, browsers and servers, verify owned process cleanup and check closed ports
 ## Scope
 
 This is a personal practice simulation with idealized sensors and virtual time.
-It has no physical PLC, connected equipment or hardware safety circuit. It does
-not establish dosing accuracy, real-time response or safe control of a machine.
+It has no physical PLC, connected equipment or certified safety hardware. The
+emergency-stop and guard layer is a software model of a dual-channel safety
+function, not a safety circuit. It does not establish dosing accuracy,
+real-time response or safe control of a machine.
 The maintenance log keeps local work orders. It does not provide the wider
 scheduling and asset management of a commercial computerized maintenance
 management system (CMMS).

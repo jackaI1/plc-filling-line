@@ -63,8 +63,9 @@ function render(state) {
     lamp.className = `lamp ${value ? 'on' : ''}`; lamp.setAttribute('role', 'img'); lamp.setAttribute('aria-label', value ? 'true' : 'false'); item.prepend(lamp); io.append(item);
   }
   document.querySelectorAll('[data-fault]').forEach(input => {
+    // Checkboxes show the physical switch; the PLC input may stay latched after a safety trip.
     const value = ['jammed', 'fill_sensor_stuck'].includes(input.dataset.fault)
-      ? state.plant[input.dataset.fault] : state.inputs[input.dataset.fault];
+      ? state.plant[input.dataset.fault] : state.faults[input.dataset.fault];
     if (document.activeElement !== input) input.checked = input.hasAttribute('data-invert') ? !value : value;
   });
   const key = JSON.stringify(state.orders); if (key !== lastOrders) {orders(state.orders); lastOrders = key;}
