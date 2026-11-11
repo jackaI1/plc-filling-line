@@ -56,6 +56,10 @@ checks that a monitored reset and a fresh start complete a five-bottle batch.
 The run uses virtual time and needs no server. `tests/test_safety.py` runs every
 case in CI.
 
+Run `python tools/build.py` first. The runner loads the compiled controller and
+stops with "Build the PLC first" on a fresh clone otherwise. On macOS, put
+Homebrew's `bison` and `flex` on the PATH before building (see the README setup).
+
 Result of `python -m fillingline.safety_check` (virtual time, 50 ms scans):
 
 | Case | Motor and valve off in the trip scan | Channel disagreement latched | Reset refused while the fault is present | Five-bottle batch after repair and reset |
@@ -79,6 +83,11 @@ What the cases show:
 - **A welded reset contact cannot restart the line.** With the contact welded
   closed there is never a rising edge, so the monitored reset is never accepted.
 - **A wrong PLC output does not move the drives.** This is the hard-wired gate.
+- **Two "No" values in the disagreement column are expected.** The welded reset
+  and the stuck-on PLC output do not make channel A and channel B of a function
+  disagree. The reset contact is not a safety channel, and the PLC output does
+  not change either channel's reading, so no channel fault should latch. The
+  other five cases are channel faults and show Yes.
 
 ## 5. Performance level estimate
 
