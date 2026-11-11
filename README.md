@@ -269,10 +269,12 @@ python -m unittest discover -s tests -v
 
 Continuous integration (CI), the automated checks GitHub runs for changes,
 rebuilds the controller and checks that its exported code matches the ladder.
-The 57 tests exercise timed filling, counting, fault recovery, 2,000 randomized
+The 72 tests exercise timed filling, counting, fault recovery, 2,000 randomized
 input steps, saved maintenance records and the terminal walkthrough. They check
 the fill-clearance timeout just before and exactly at its one-second limit,
 same-scan output shutdown, and reset with a sensor held on.
+The safety tests inject single faults into the emergency stop and guard and check that
+the drives stop in the same step and recover only after a monitored reset.
 
 The wiring checks cover duplicate terminals, unconnected pins, connector
 occupancy, all 15 drawing addresses, exact BOM totals, literal spreadsheet text,
