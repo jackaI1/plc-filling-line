@@ -239,17 +239,27 @@ function disagree for more than two steps, the layer records a channel fault. Th
 catches a switch that is stuck on the wrong reading before I rely on it.
 
 To see the rules in action, run this from the project folder with the Python
-environment active:
+environment active. The check loads the compiled controller, so build it first
+(the same build step as in the setup above):
 
 ```sh
+python tools/build.py
 python -m fillingline.safety_check
 ```
 
-It starts a batch and injects one fault at a time: a stuck emergency-stop
-channel, a stuck guard channel, a reset button welded shut and a controller
-output stuck on. Each case must cut the drive power in the trip step, refuse a
-reset while the fault remains, and complete a five-bottle batch after I repair it.
-The table it prints is copied into the [safety specification](docs/safety-function.md).
+It starts a batch and injects one fault at a time. There are seven cases: five where one
+channel of the emergency stop or the guard is stuck in a wrong reading, a reset
+button welded shut, and a controller that switches the conveyor and valve on
+during a stop. Each case must cut the drive power in the trip step,
+refuse a reset while the fault remains, and complete a five-bottle batch after I
+repair it.
+
+The table has a column for a channel disagreement. It shows Yes for the five
+channel faults. It shows No for the welded reset and the stuck-on controller,
+which is correct: neither one makes the two channels of a function disagree. The
+reset contact is not a safety channel, and the controller output does not change
+either channel's reading. The table it prints is copied into the
+[safety specification](docs/safety-function.md).
 
 The specification explains the design in full. It also estimates the performance
 level under ISO 13849-1, the standard that rates how much risk a safety stop
